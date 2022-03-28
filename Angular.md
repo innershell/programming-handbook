@@ -1,9 +1,10 @@
 # Angular
 ## Environment Dependencies
+This are my current dependency versions.  
 - node v16.14.0
 - npm v8.3.1
 - ng v12.2.16
-- ionic v6.
+- ionic v6.18.1
  
 ## Installation
 Install Node runtime. If the repo packages are not what you want, manually install node from [NodeSource](https://github.com/nodesource/distributions/blob/master/README.md#debinstall).  
