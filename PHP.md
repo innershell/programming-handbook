@@ -156,7 +156,6 @@ DB::$nonsql_error_handler = 'error'; // runs on library errors (bad syntax, etc)
 $result = db::queryFirstRow("SELECT * FROM records where uuid = %s", $record_uuid);
 DB::query("INSERT INTO records_archive SELECT * FROM records WHERE uuid = %s", $data->uuid);
 DB::delete("records", "uuid=%s", $data->uuid);
-
 DB::insert('records', [
 	'uuid' => $data->uuid,
 	'tenant_uuid' => "44f2e162-7992-11ea-8bb6-ace4718a5f3d", /** REFACTOR */
