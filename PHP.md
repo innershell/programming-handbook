@@ -118,22 +118,36 @@ foreach
 ```
 # Function
 ```
-function
+function functionName(int $argument = 5) {
+	// Code
+	return $result;
+}
+
+function functionName(&$argument) { // Pass argument by reference
+	// Code
+	return $result;
+}
 ```
+
+# Superglobal Variables
+```
+$_POST["name"] // Obtains the HTTP post variables.
+$_GET["name"] // Obtains the HTTP get variables.
+$_SESSION["login"] // Obtains the session variables.
+```
+[More Here](https://www.w3schools.com/php/php_superglobals.asp)
 
 # Built-In Methods
 ```
 session_start(); // Starts new or resume existing session.
-$_POST["name"] // Obtains the HTTP post variables.
-$_GET["name"] // Obtains the HTTP get variables.
-$_SESSION["login"] // Obtains the session variables.
 echo myString; // Output a string.
 print(); // Output a formatted string.
 header("Location: <path>"); // Redirect to path
 json_encode(); // Returns JSON representation of a value.
 preg_replace(); // Perform regular expression search and replace.
 preg_match(); // Perform a regular expression match.
-	
+```
+
 # Sample Code
 ```
 require_once '../resources/vendors/meekro/db.class.php';
@@ -142,6 +156,7 @@ DB::$nonsql_error_handler = 'error'; // runs on library errors (bad syntax, etc)
 $result = db::queryFirstRow("SELECT * FROM records where uuid = %s", $record_uuid);
 DB::query("INSERT INTO records_archive SELECT * FROM records WHERE uuid = %s", $data->uuid);
 DB::delete("records", "uuid=%s", $data->uuid);
+
 DB::insert('records', [
 	'uuid' => $data->uuid,
 	'tenant_uuid' => "44f2e162-7992-11ea-8bb6-ace4718a5f3d", /** REFACTOR */
@@ -151,5 +166,4 @@ DB::insert('records', [
 	'json' => json_encode($data->json),
 	'timestamp' => DB::sqleval("NOW()")
 ]);
-
 ```
