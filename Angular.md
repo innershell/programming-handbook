@@ -8,24 +8,40 @@ This are my current dependency versions.
  
 ## Installation
 Install Node runtime. If the repo packages are not what you want, manually install node from [NodeSource](https://github.com/nodesource/distributions/blob/master/README.md#debinstall).  
-`sudo apt install nodejs`
+```
+sudo apt install nodejs
+```
 
 Install NPM  
-`sudo apt install npm`
+```
+sudo apt install npm
+```
 
 Install Angular CLI  
-`sudo npm install –g @angular/cli`
+```
+sudo npm install –g @angular/cli
+```
 
 Install Ionic CLI  
-`sudo npm install -g @ionic/cli`
+```
+sudo npm install -g @ionic/cli
+```
 
 ## Create, Build, and Run
 
 Create a basic app.  
-`ionic start`
+```
+ionic start
+```
 
 Build the app with either Angular CLI or Ionic CLI  
-`ng build` or `ionic build`
+```
+ng build
+ionic build
+```
 
 Deploy the app with eeither Angular CLI or Ionic CLI. Default port is 4200 if not specified.  
-`ng serve --host 0.0.0.0 --port 4200` or `ionic serve --host 0.0.00`
+```
+ng serve --host 0.0.0.0 --port 4200
+ionic serve --host 0.0.00
+```
