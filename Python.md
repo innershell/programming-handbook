@@ -1,5 +1,14 @@
 https://core-electronics.com.au/guides/python-reference-cheat-sheet/
 
+# Packages
+Python's package manager is `pip`. Here are some basic commands.
+```
+pip install <package name>
+pip uninstall <package name>
+pip install <package name> --upgrade
+pip install <package name> --U
+```
+
 # Import
 ```
 import time
