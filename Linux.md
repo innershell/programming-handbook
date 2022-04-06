@@ -13,6 +13,11 @@ A cheat sheet of the package manager name and usage options for each platform.
 # Useful Commands
 Command to locate a file. To search for a file that contains two or more words, use an asterisk (*).
 
+## history
+Review the commands you’ve entered before.
+
+    history
+
 ## locate
     locate -i school*note
 
@@ -30,17 +35,17 @@ A report on the system’s disk space usage. Use `-m` option to report in MB.
 
     df -m
 
-# du
+## du
 How much space a file or a directory takes.
 
     du
 
-# head
+## head
 View the first 1o lines of a text file.
 
     head
 
-# tail
+## tail
 View the last 10 lines of a text file.
 
     tail
