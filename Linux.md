@@ -65,6 +65,7 @@ Report on network connections. For example, good way to find programs listening 
     netstat -tlp
 
 - `-t` TCP protocols
+- `-n` Numbers (e.g., for ports)
 - `-l` Active listeners
 - `-p` Program names
 
