@@ -1,32 +1,35 @@
 # Installing
 ## Ubuntu
-	sudo apt install nginx
-	nginx -v // Verify successful installation
+    sudo apt install nginx
+    nginx -v // Verify successful installation
 	
 ## Redhat
-	sudo dnf install nginx
+    sudo dnf install nginx
 
 ## Arch
-	sudo pacman -S nginx
-	yay nginx
+    sudo pacman -S nginx
+    yay nginx
 
 # Controlling Service
 
-	sudo systemctl start nginx    // Start Nginx
-	sudo systemctl stop nginx     // Stop Nginx
-	sudo systemctl reload nginx   // Reload Nginx (after configuration changes)
-	sudo system ctl restart nginx // Hard restart
-	sudo systemctl enable nginx   // Load at at startup
-	sudo systemctl disable nginx  // Do not load at startup
-	
+    sudo nginx -t                 // Check syntax of Nginx configuration file
+    sudo nginx start              // Start Nginx
+    sudo nginx stop               // Stop Nginx
+    sudo systemctl start nginx    // Start Nginx as a service
+    sudo systemctl stop nginx     // Stop Nginx service
+    sudo systemctl reload nginx   // Reload Nginx service (after configuration changes)
+    sudo systemctl restart nginx  // Hard restart service
+    sudo systemctl enable nginx   // Load Nginx service at at startup
+    sudo systemctl disable nginx  // Do not load Nginx service at startup
+
 # Firewall
 The operating system's firewall will prevent traffic from accessing your Nginx server.
 
 ## Ubuntu (UnComplicated Firewall "ufw")
-	sudo ufw app list             // Displays available firewall profiles
-	sudo ufw allow 'nginx http'
-	sudo ufw allow 'nginx https'
-	sudo ufw allow 'nginx full'   // Enables both HTTP and HTTPS
+    sudo ufw app list             // Displays available firewall profiles
+    sudo ufw allow 'nginx http'
+    sudo ufw allow 'nginx https'
+    sudo ufw allow 'nginx full'   // Enables both HTTP and HTTPS
 
 # Run
 	http://127.0.0.1
