@@ -13,8 +13,6 @@
 # Controlling Service
 
     sudo nginx -t                 // Check syntax of Nginx configuration file
-    sudo nginx start              // Start Nginx
-    sudo nginx stop               // Stop Nginx
     sudo systemctl start nginx    // Start Nginx as a service
     sudo systemctl stop nginx     // Stop Nginx service
     sudo systemctl reload nginx   // Reload Nginx service (after configuration changes)
