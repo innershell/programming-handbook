@@ -1,3 +1,14 @@
+# Package Manager
+
+| Description | Ubuntu | Arch | Fedora |
+|-|-|-|-|
+| **Package Manager** | apt | pacman or yay | dnf |
+| **Update Package List** | apt update | pacman -Syu | dnf update |
+| **Find Package** | apt search pkg_name | pacman -S pkg_name<br>yay pkg_name | dnf search pkg_name |
+| **Install** | apt install pkg_name | pacman -Ss pkg_name<br>yay pkg_name | dnf install pkg_name |
+| **Uninstall** | apt remove pkg_name | pacman -R pkg_name<br>yay -R pkg_name | dnf remove pkg_name |
+
+
 # Network Tools (net-tools)
 
     sudo apt install net-tools
