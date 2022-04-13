@@ -1,12 +1,15 @@
 # Installing
 ## Ubuntu
-    sudo apt install nginx
-    nginx -v // Verify successful installation
-	
+### Installation
+`sudo apt install nginx`
+
+### Configuration
+`/etc/nginx/sites-available`
+
 ## Fedora
 [Wiki](https://fedoraproject.org/wiki/Nginx)
 
-    sudo dnf install nginx
+`sudo dnf install nginx`
 
 ## Arch
     sudo pacman -S nginx
@@ -25,26 +28,31 @@
 ## Configuration Sample
 ```
 server {
-  listen 80;
-  listen [::]:80;
-
-  server_name example.ubuntu.com;
-
+  listen 80 default_server;
+  listen [::]:80 default_server;
   root /var/www/my_files;
-  index index.html;
+  index index.html index.htm index.nginx-debian.html;
+  server_name _;
 
+  # First attempt to serve request as file, then
+  # as directory, then fall back to displaying a 404.
   location / {
     try_files $uri $uri/ =404;
   }
   
-  location ^~ /api/ {
-    proxy_pass http://somewhere-else.com;
+  # Setting up a reverse proxy.
+  location ^~ /rest/api/2/ {
+    proxy_pass https://somewhere-else.com;
+    proxy_set_header X-Real-IP $remote_addr;
+    proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+    proxy_set_header X-Forwarded-Proto $scheme;
   }
-  
 }
 ```
 See: [Full Example Configuration](https://www.nginx.com/resources/wiki/start/topics/examples/full/)
 
+## Verify Configuration
+`nginx -t`
 
 # Controlling Service
 
