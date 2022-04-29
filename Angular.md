@@ -40,6 +40,11 @@ ng build
 ionic build
 ```
 
+Build the app with a different base href (e.g., deploying as subfolder)
+```
+ng build --prod --base-href /sub-directory-name/
+```
+
 Deploy the app with eeither Angular CLI or Ionic CLI. Default port is 4200 if not specified.  
 ```
 ng serve --host 0.0.0.0 --port 4200
