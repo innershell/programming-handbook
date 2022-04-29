@@ -55,6 +55,16 @@ Compares the contents of two files line by line. After analyzing the files, it w
 
     diff
 
+## ps
+Find running processes.
+
+     ps -ef | grep nginx
+
+## scp
+Secure copy files to a remote server.
+
+    scp file.tar.gz user@server_name:/folder_path/
+
 # Network Tools (net-tools)
 
     sudo apt install net-tools
