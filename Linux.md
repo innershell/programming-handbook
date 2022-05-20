@@ -60,6 +60,11 @@ Find running processes.
 
      ps -ef | grep nginx
 
+## tar
+Create a tar.gz file
+
+    tar -czvf file.tar.gz directory
+
 ## scp
 Secure copy files to a remote server.
 
