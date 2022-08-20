@@ -12,7 +12,7 @@ Create a folder on local drive where your working source files will be placed. T
 
 ## Fetch Repo
 
-	git clone https://<username>:<personal-access-token>@<github-url.git>
+	git clone https://<username>:<personal-access-token>@github.com/innershell/respository-name.git
 
 ## Add Files
 
