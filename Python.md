@@ -148,11 +148,21 @@ r = requests.get(i_file_url, auth=(USERNAME,PASSWORD))
 ```
 
 ## Read a File
+Method 1
 ```
 with open(os.getcwd() + '/input-jira.csv', 'wb') as f: f.write(r.content)
 with open('input-jira.csv', newline='') as csv_file:
   csv_file = csv.reader(csv_file, delimiter=',')
   for x in csv_file: jira_list.append(x) #Create a list object.
+```
+Method 2
+```
+file = open('file_to_open.txt', 'r')
+lines = file.read().splitlines()
+file.close()
+
+for line in lines:
+  # Do something with the line
 ```
 
 ## Write a File
