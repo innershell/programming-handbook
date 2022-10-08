@@ -20,6 +20,32 @@ import os // file system
 import matplotlib.pyplot as plt // charts
 ```
 
+# Command Line Arguments
+```
+import sys
+
+file_name = sys.argv[0]
+num_arguments = len(sys.argv)
+arguments = sys.arv[1]
+```
+# Execution Interruptors
+```
+# Exit without errors
+exit(0)
+
+# Exit with errors
+exit(1)
+
+# Exit loop/iterator
+break
+```
+
+# Naming Conventions
+```
+my_variable_name
+my_function_name
+```
+
 # Data Types
 ## Number
 ```
@@ -147,15 +173,26 @@ class myClass:
 r = requests.get(i_file_url, auth=(USERNAME,PASSWORD))
 ```
 
-## Read a File
-Method 1
+## File Handling
+### File Size
+Method 1 - Fastest
 ```
-with open(os.getcwd() + '/input-jira.csv', 'wb') as f: f.write(r.content)
-with open('input-jira.csv', newline='') as csv_file:
-  csv_file = csv.reader(csv_file, delimiter=',')
-  for x in csv_file: jira_list.append(x) #Create a list object.
+import os
+return os.stat("file.txt").st_size
 ```
 Method 2
+```
+import os
+os.path.getsize("file.txt")
+```
+
+### Read a File
+Method 1 - Read & Print
+```
+with open(os.getcwd() + '/input-jira.csv', 'wb') as f: f.write(r.content)
+```
+
+Method 2 - Read & Print Line-by-Line
 ```
 file = open('file_to_open.txt', 'r')
 lines = file.read().splitlines()
@@ -163,6 +200,13 @@ file.close()
 
 for line in lines:
   # Do something with the line
+```
+
+Method 3 - Read as CSV File
+```
+with open('input-jira.csv', newline='') as csv_file:
+  csv_file = csv.reader(csv_file, delimiter=',')
+  for x in csv_file: jira_list.append(x) #Create a list object.
 ```
 
 ## Write a File
