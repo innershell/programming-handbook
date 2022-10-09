@@ -21,12 +21,51 @@ import matplotlib.pyplot as plt // charts
 ```
 
 # Command Line Arguments
+Basic
 ```
 import sys
 
 file_name = sys.argv[0]
 num_arguments = len(sys.argv)
 arguments = sys.arv[1]
+```
+
+Validate Arguments
+```
+import sys
+import os
+
+# Validate CLI arguments
+if len(sys.argv) == 1 or len(sys.argv) > 3:
+    print('app_name: bad usage')
+    print('')
+    print('Usage:')
+    print(' python3 app_name.py <file> <device> [options]')
+    print(' python3 app_name.py file.txt D1232AC -f')
+    print('')
+    print('Converts a debug log file into a human-readible time sequence')
+    print('')
+    print('Options:')
+    print(' -f, --fast       Faster parsing with less data output')
+    print('')
+    exit(1)
+
+# Process CLI argument for file name
+if not os.path.isfile(sys.argv[1]):
+    print('Error: File "' + sys.argv[1] + '" not found')
+    print('')
+    exit(1)
+else:
+    file_name = sys.argv[1]
+
+
+# Process CLI argument for options
+if len(sys.argv) == 3 and (sys.argv[2] == '-f' or sys.argv[2] == '--fast'):
+    fast_option = True
+else:
+    print('Error: Invalid option "' + sys.argv[2])
+    print('')
+    exit(1)
 ```
 # Execution Interruptors
 ```
