@@ -1,7 +1,7 @@
 # Package Manager
 A cheat sheet of the package manager name and usage options for each platform.
 
-| Description | Ubuntu | Arch | Fedora |
+| Description | Ubuntu | [Arch](https://wiki.archlinux.org/title/pacman) | Fedora |
 |-|-|-|-|
 | **Package Manager** | apt | pacman or yay | dnf |
 | **Update Packages** | apt update && apt upgrade | pacman -Syu | dnf update |
