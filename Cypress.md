@@ -8,14 +8,14 @@ cy.get('#text-new-patient-error-message').invoke('text').then(error => {
 
 # Things to Do with Cypress Objects
 ```
-.type('<some text>') // Type in some text.
-.click() // Click the the object.
-.should('exist') // Check that the object is on the page.
-.find('p') // Find an element within the found object.
+.type('<some text>')   // Type in some text.
+.click()               // Click the the object.
+.should('exist')       // Check that the object is in the DOM.
+.should('be.visible')  // Check that the object is visible on the page.
+.find('p')             // Find an element within the found object.
 ```
 
 # Exception Handling
-
 https://www.lambdatest.com/learning-hub/exception-handling-in-cypress
 ```
 cy.on('uncaught:exception', (err, runnable) => {
@@ -25,3 +25,5 @@ cy.on('uncaught:exception', (err, runnable) => {
     return false // Do not log the error to the command log.
 })
 ```
+# Button Click
+[Cypress.io - Blog - Button Click Issues](https://www.cypress.io/blog/2019/01/22/when-can-the-test-click)
