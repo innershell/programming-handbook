@@ -53,3 +53,66 @@ function pow(x, n) {
   ...
 }
 ```
+
+# HTTP Requests
+```
+const baseURL = 'https://example.com/rest/api/2/search?';
+const options = '&maxResults=20';
+const username = 'api';
+const token = '550e8400-e29b-41d4-a716-446655440000';
+
+// Add basic authentication header data.
+let headers = new Headers();
+headers.set('Authorization', 'Basic ' + btoa(username + ":" + token));
+
+// Fetch data from API.
+async function getIssues() {
+  let response = await fetch(baseURL + jql + options, {
+  method: 'get',
+  headers: headers
+}); 
+
+let data = await response.json();
+console.log(data); 
+```
+
+# JSON
+## Finding Keys
+```
+let JSON = { fname : "John", lname : "doe", age: 23 }
+for (let key in JSON) console.log('key', key);
+```
+
+Output:
+```
+> "fname"
+> "lname"
+> "age"
+```
+
+# REGEX
+
+## Instantiate
+```
+const re = /foo/;
+const val = 'Hello';
+let result = val.search(re);
+```
+
+## String Functions
+```
+const matches = 'aBC'.match(/[A-Z]/g);
+// Output: Array [B, C]
+```
+```
+const index = 'aBC'.search(/[A-Z]/);
+// Output: 1
+```
+```
+const next = 'aBC'.replace(/a/, 'A');
+// Output: ABC
+```
+```
+const result = /^dim/.test("dimValue");
+// Output: true
+``` 
