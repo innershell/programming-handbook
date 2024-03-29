@@ -3,12 +3,14 @@ A cheat sheet of the package manager name and usage options for each platform.
 
 | Description | Ubuntu | [Arch](https://wiki.archlinux.org/title/pacman) | Fedora |
 |-|-|-|-|
-| **Package Manager** | apt | pacman or yay | dnf |
-| **Update Packages** | apt update && apt upgrade | pacman -Syu | dnf update |
-| **Find Package** | apt search pkg | pacman -S pkg<br> yay pkg | dnf search pkg |
-| **Install** | apt install pkg | pacman -Ss pkg<br> yay pkg | dnf install pkg |
-| **Uninstall** | apt remove pkg | pacman -Rsu pkg<br> yay -R pkg | dnf remove pkg |
-| **Remove Depencencies** | apt autoremove | N/A | dnf autoremove |
+| **Package Manager** | `apt` | `pacman` <br> `yay` | `dnf` |
+| **Package Details** | | `pacman -si` | |
+| **Update Packages** | `apt update && apt upgrade` | `pacman -Syu` | `dnf update` |
+| **Find Package** | `apt search pkg` | `pacman -S pkg` <br> `yay pkg` | `dnf search pkg` |
+| **Install** | `apt install pkg` | `pacman -Ss pkg` <br> `yay pkg` | `dnf install pkg` |
+| **Uninstall** | `apt remove pkg` | `pacman -Rsu pkg` <br> `yay -R pkg` | `dnf remove pkg` |
+| **Remove Depencencies** | `apt autoremove` | `pacman -Qtdq \| sudo pacman -Rns -` | `dnf autoremove` |
+| **Remove Package Cache** | | `pacman -Scc` | |
 
 # Useful Commands
 Command to locate a file. To search for a file that contains two or more words, use an asterisk (*).
@@ -19,6 +21,8 @@ Review the commands you’ve entered before.
     history
 
 ## locate
+Find files by name by ignoring case.
+
     locate -i school*note
 
 ## find
@@ -29,6 +33,9 @@ To find files in the current directory.
 To look for directories.
 
     / -type d -name notes. txt
+
+## journalctl
+To print log entries from `systemd`
 
 ## df
 A report on the system’s disk space usage. Use `-m` option to report in MB.
