@@ -46,6 +46,12 @@ docker run -it alpine                  // Run the image interactive
 ```
 Note: Docker run will use pull if the image was not downloaded.
 
+There is a simple approach to take advantage of a Docker container's environment to run a single file project. Take for example this Node project that has a single *.js file to run. You can execute the following command:
+```
+docker run -it --rm --name my-running-script -v "$PWD":/usr/src/app -w /usr/src/app node:19-bullseye node your-daemon-or-script.js
+```
+[Source](https://www.docker.com/blog/how-to-use-the-node-docker-official-image/)
+
 ## Creating Docker Images
 Use a Dockerfile to create a Docker image. Place the Dockerfile in the root folder of your source code project.
 The important ones are:
