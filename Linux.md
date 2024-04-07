@@ -98,3 +98,14 @@ Configure network adapters and interfaces.
     sudo ifconfig eth0 down
     sudo ifconfig eth0 hw ether xx:xx:xx:xx:xx:xx
     sudo ifconfig eth0 up
+
+# System Tools
+## lspci
+List of all PCI components.
+
+    lscpi
+
+## lshw
+List of all hardware components.
+
+    lshw -C video
