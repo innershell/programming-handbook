@@ -34,19 +34,6 @@ To look for directories.
 
     / -type d -name notes. txt
 
-## journalctl
-To print log entries from `systemd`
-
-## df
-A report on the system’s disk space usage. Use `-m` option to report in MB.
-
-    df -m
-
-## du
-How much space a file or a directory takes.
-
-    du
-
 ## head
 View the first 1o lines of a text file.
 
@@ -99,7 +86,16 @@ Configure network adapters and interfaces.
     sudo ifconfig eth0 hw ether xx:xx:xx:xx:xx:xx
     sudo ifconfig eth0 up
 
-# System Tools
+# System Diagnostic Tools
+
+## journalctl
+To print log entries from `systemd`
+
+## dmesg
+Print the kernel messages.
+
+    dmesg
+
 ## lspci
 List of all PCI components.
 
@@ -109,3 +105,13 @@ List of all PCI components.
 List of all hardware components.
 
     lshw -C video
+
+## df
+A report on the system’s disk space usage. Use `-m` option to report in MB.
+
+    df -m
+
+## du
+How much space a file or a directory takes.
+
+    du
