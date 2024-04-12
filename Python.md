@@ -248,6 +248,15 @@ with open('input-jira.csv', newline='') as csv_file:
   for x in csv_file: jira_list.append(x) #Create a list object.
 ```
 
+Method 4 - Use DictReader Object
+```
+csv_records = []
+csv_file = csv.DictReader(open('file.csv', 'r')) # Open CSV file as read-only and create a DictReader object.
+for col in csv_file:
+    csv_records.append(col['column_name'])
+print(csv_records)
+```
+
 ## Write a File
 ```
 with open(OUTPUT_CSV, mode='w') as export_file:
