@@ -4,8 +4,9 @@
 
 # Component
 Create a folder `Components` in your app `src` folder.
+
+## Method 1
 ```
-# Method 1
 import { Stuff } from "react";
 function ComponentName() {
   const varName = "";
@@ -14,13 +15,41 @@ function ComponentName() {
 export default ComponentName;
 ```
 
+## Method 2
 ```
-# Method 2
 import { Stuff } from "react";
 const ComponentName = () = {
   return();
 }
 export default ComponentName;
+```
+
+## Method 3
+This one shows defining a child component to be used in the parent component.
+```
+import React from 'react';
+import {Text, View} from 'react-native';
+
+const Cat = () => {
+  return (
+    <View>
+      <Text>I am also a cat!</Text>
+    </View>
+  );
+};
+
+const Cafe = () => {
+  return (
+    <View>
+      <Text>Welcome!</Text>
+      <Cat />
+      <Cat />
+      <Cat />
+    </View>
+  );
+};
+
+export default Cafe;
 ```
 
 # Fragments
