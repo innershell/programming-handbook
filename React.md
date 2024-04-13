@@ -1,5 +1,6 @@
 # Quick Start Resources
 - Infinite Red's React Native Boilerplate Template - [infinitered/ignite](https://github.com/infinitered/ignite) (Github)
+- [React Native Core Components and APIs](https://reactnative.dev/docs/components-and-apis)
 
 
 # Component
