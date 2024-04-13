@@ -2,6 +2,19 @@
 - Infinite Red's React Native Boilerplate Template - [infinitered/ignite](https://github.com/infinitered/ignite) (Github)
 - [React Native Core Components and APIs](https://reactnative.dev/docs/components-and-apis)
 
+# Development Environment
+- [Expo Go](https://expo.dev/go) ([Docs](https://docs.expo.dev/))
+- [Snack](https://snack.expo.dev/) - Play with React Native in the browser.
+
+## npm vs npx
+- `npm` installs packages both globally and locally for your project. Local installs are placed in `./node_modules/.bin/` directory and added to the `package.json` dependency specifications.
+- `npx` executes (runs) a package without installing locally. This allows you to test different package versions. Can also run directly from GitHub (pretty cool).
+## Expo Go
+```
+npx create-expo-app AwesomeProject
+cd AwesomeProject
+npx expo start
+```
 
 # Component
 Create a folder `Components` in your app `src` folder.
@@ -158,3 +171,36 @@ function ComponentName({ items, heading, onSelectItem }): Props) {
 ```
 # Use it on the app.
 <ComponentName items={items} heading={heading} onSelectItem={console.log("selected")} />
+```
+
+# Platform
+Detect which platform is running and use it to implement [platform-specific code](https://reactnative.dev/docs/platform-specific-code#platform-module). Here is a sample code detecting `ios` or `android` platform.
+```
+import {Platform, StyleSheet} from 'react-native';
+
+const styles = StyleSheet.create({
+  height: Platform.OS === 'ios' ? 200 : 100,
+});
+```
+
+```
+import {Platform, StyleSheet} from 'react-native';
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    ...Platform.select({
+      ios: {
+        backgroundColor: 'red',
+      },
+      android: {
+        backgroundColor: 'green',
+      },
+      default: {
+        // other platforms, web for example
+        backgroundColor: 'blue',
+      },
+    }),
+  },
+});
+```
