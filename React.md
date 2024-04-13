@@ -1,3 +1,24 @@
+# Component
+Create a folder `Components` in your app `src` folder.
+```
+# Method 1
+import { Stuff } from "react";
+function ComponentName() {
+  const varName = "";
+  return();
+}
+export default ComponentName;
+```
+
+```
+# Method 2
+import { Stuff } from "react";
+const ComponentName = () = {
+  return();
+}
+export default ComponentName;
+```
+
 # Fragments
 Each React component can return only a single element. Instead of wrapping your return elements in a `<div />` tag, use fragments.
 ```
