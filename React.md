@@ -11,6 +11,8 @@
 - `npx` executes (runs) a package without installing locally. This allows you to test different package versions. Can also run directly from GitHub (pretty cool).
 ## Expo Go
 ```
+which npx
+npm install -g npx
 npx create-expo-app AwesomeProject
 cd AwesomeProject
 npx expo start
