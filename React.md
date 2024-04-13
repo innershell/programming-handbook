@@ -1,3 +1,7 @@
+# Quick Start Resources
+- Infinite Red's React Native Boilerplate Template - [infinitered/ignite](https://github.com/infinitered/ignite) (Github)
+
+
 # Component
 Create a folder `Components` in your app `src` folder.
 ```
