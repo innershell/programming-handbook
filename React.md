@@ -72,11 +72,16 @@ import { Fragments } from "react";
 
 
 # State Management
-You need to use states so that the variables declared in a component is accessible in the JSX. States are mutable, it's the purpose to tell React that a component contains data that can change at any time.
+States are used as the component's personal data storage. It uses Hooks, which is a kind of function that lets you "hook into" React features.
+- You need to use states so that the variables declared in a component are accessible in the JSX.
+- States are mutable, it's the purpose to tell React that a component contains data that can change at any time.
+- [Other kinds of Hooks in the React documentation](https://react.dev/reference/react)
+
 ```
 import { useState } from "react";
 const [selectedIndex, setSelectedIndex] = useState(-1);
 ```
+Explanation: Creates a new `selectedIndex` variable with default value `-1` and defines the `setSelectedIndex()` function to set the value of the variable.
 
 # Component Inputs
 ## Props
