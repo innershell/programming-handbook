@@ -23,6 +23,41 @@ Use the `<script>` tag in the header to encapsulate or reference to the external
   <script src="resources/js/donor-bus-logic.js"></script> 
 </head>
 ```
+# Imports and Exports
+Here’s a cheatsheet to show you the different ways of exporting and the corresponding way to import it. It really distills to 3 types: name, default, and list. Just make sure your export matches your import way and you will have no problem.
+```
+// Name Export | Name Import
+export const name = 'value'
+import { name } from '...'
+```
+```
+// Default Export | Default Import
+export default 'value'
+import anyName from '...'
+```
+```
+// Rename Export | NameImport
+export { name as newName }
+import { newName } from '...'
+```
+```
+// Name + Default | Import All
+export const name = 'value'
+export default 'value'
+import * as anyName from '...'
+```
+```
+// Export List + Rename | Import List + Rename
+export {
+  name1,
+  name2 as newName2
+}
+import {
+  name1 as newName1,
+  newName2
+} from '...'
+```
+
 
 # Functions
 ## Dynamic Functions 
