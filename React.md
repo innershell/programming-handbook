@@ -46,7 +46,7 @@ const [selectedIndex, setSelectedIndex] = useState(-1);
 ```
 
 # Component Inputs
-## Prop
+## Props
 Pass inputs to a React component using Props. Props are immutable.
 
 ```
