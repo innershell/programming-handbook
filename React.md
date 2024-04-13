@@ -52,6 +52,12 @@ Pass inputs to a React component using Props. Props are immutable.
 ```
 # Define the Prop in the component.
 import { Props } from "react";
+
+interface Props {
+  items: string[];
+  heading: string;
+}
+
 function ComponentName({ items, heading }: Props) {
   return (
     // Now you can reference {items} or {heading} props anywhere in your JSX.
