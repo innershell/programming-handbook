@@ -277,3 +277,21 @@ const styles = StyleSheet.create({
   },
 });
 ```
+
+# React Native Components
+## Image
+For images that will be packaged with the bunder.
+```
+<image source={require("./assets/icon.png")} />
+```
+
+For remote images.
+```
+<image
+  source={{
+    width: 200,
+    height: 300,
+    uri: "https://picsum.photos/200/300"
+  }}
+/>
+```
