@@ -1,11 +1,44 @@
+# NVM
+Node Version Manager (NVM) can be used to install the Node.js runtime. It is also be used to install and use specific versions of Node.js for your environment.
+
+Install `nvm`:
+```
+wget -qO- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
+
+export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+```
+
+List available versions to install:
+```
+nvm list-remote
+```
+
+List versions install on the system:
+```
+nvm ls
+```
+
+Install node various versions:
+```
+nvm install node // Latest version
+nvm install --lts // Latest stable version
+nvm install 18.10.0 // Specific version
+```
+
+Set the default version
+```
+nvm use 19.0.0
+```
+
 # NPM
 Install exact packages & versions from `package.json` and `package-log.json` cleanly. 
-Just note that npm ci deletes node_modules before starting. But it’s fast!
+Just note that `npm ci` deletes `node_modules` before starting. But it’s fast!
 ```
 npm ci
 ```
 
-Install a package locally.
+Install node packages:
 ```
 // Local install
 npm install <package>
@@ -16,7 +49,7 @@ npm install -g <package>
 npm i -g <package>
 ```
 
-Uninstall a package.
+Uninstall a package:
 ```
 // Local install
 npm uninstall <package>
@@ -27,21 +60,20 @@ npm uninstall -g <package>
 npm un -g <package>
 ```
 
-Update a package.
+Update a package:
 ```
 npm update <package>
 npm u <package>
 ```
 
-List installed packages.
+List installed packages:
 ```
-npm install -g npm@latest
 npm list
 ```
 
-Determines which version of `npm` is installed.
+Check version of `npm` is installed.
 ```
-which npm
+npm version
 ```
 
 Install a specific version of `npm`.
@@ -53,6 +85,7 @@ npm version
 Make npm install less noisy:
 ```
 npm config set loglevel warn
+
 ```
 or add this to `~/.npmrc`:
 ```
@@ -60,9 +93,4 @@ loglevel=warn
 source.
 ```
 
-# NVM
-Use another node version:
-```
-$ nvm use 8
-$ nvm use 10
-```
+
