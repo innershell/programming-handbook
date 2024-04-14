@@ -68,6 +68,12 @@ const Cafe = () => {
 export default Cafe;
 ```
 
+## Method 4
+Use "ES7+ React/Redux/React-Native snippets" VSCode extension.
+```
+rafce
+```
+
 # Fragments
 Each React component can return only a single element. Instead of wrapping your return elements in a `<div />` tag, use fragments.
 ```
@@ -102,7 +108,6 @@ Explanation: Creates a new `selectedIndex` variable with default value `-1` and 
 # Component Inputs
 ## Props
 Pass inputs to a React component using Props. Props are immutable.
-
 ```
 # Define the Prop in the component.
 import { Props } from "react";
@@ -112,8 +117,28 @@ interface Props {
   heading: string;
 }
 
-function ComponentName({ items, heading }: Props) {
+function ComponentName(props: Props) {
   return (
+    // Now you can reference {props.items} or {props.heading} props anywhere in your JSX.
+  );
+}
+```
+Here's a better way  by desconstructing the props in the function's input parameter.
+```
+# Define the Prop in the component.
+import { Props } from "react";
+
+interface Props {
+  items: string[];
+  children: string;
+  heading: string;
+  color?: 'primary' | 'secondary' | 'warning'; // Optional property with limited values.
+  onClick: () => void; // Pass in a function.
+}
+
+function ComponentName({ items, heading, color = 'primary' }: Props) {
+  return (
+    <button color={color} onClick={onClick}>{children}</button>
     // Now you can reference {items} or {heading} props anywhere in your JSX.
   );
 }
@@ -130,7 +155,7 @@ A Typescript interface to define the interface (or shape) to an object.
 ```
 interface Props {
   items: string[];
-  heading: string;
+  heading?: string; // Optional property;
 }
 
 function ComponentName( props: Props ) {
@@ -138,6 +163,26 @@ function ComponentName( props: Props ) {
     <h1>{props.heading}</h1>
   );
 }
+```
+
+## Children
+Children allows inputs to be passed as an innerHTML instead of a property.
+
+For example:
+```
+<ComponentName>Hi <span>there</span>.</ComponentName>
+```
+
+```
+interface Props {
+  children: ReactNode; // or 'string' if need just a simple string
+}
+
+const ComponentName = ({ children }: Props) => {
+  return (
+    <div>{children}</div>
+  )
+};
 ```
 
 # Event Handling
