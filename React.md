@@ -31,8 +31,11 @@ npm start // Runs the app in a simulator or publish the project to Expo so that 
 ```
 which npx
 npm install -g npx
-npx create-expo-app AwesomeProject
-cd AwesomeProject
+npx create-expo-app --template
+cd <project folder>
+npm run android
+npm run ios
+npm run web
 npx expo start
 ```
 
@@ -120,11 +123,18 @@ import { Fragments } from "react";
 
 
 # State Management
-States are used as the component's personal data storage. It uses Hooks, which is a kind of function that lets you "hook into" React features.
+States are used as the component's personal data storage. It uses [Hooks](https://github.com/react-native-community/hooks), which is a kind of function that lets you "hook into" React features.
 - You need to use states so that the variables declared in a component are accessible in the JSX.
 - States are mutable, it's the purpose to tell React that a component contains data that can change at any time.
 - [Other kinds of Hooks in the React documentation](https://react.dev/reference/react)
 
+```
+// Install the module.
+npm i @react-native-community/hooks
+
+// Import the module like this. Example of importing useDimensions shown.
+import { useDimensions } fro '@react-native-community/hooks'; 
+```
 ```
 import { useState } from "react";
 const [selectedIndex, setSelectedIndex] = useState(-1);
@@ -298,6 +308,16 @@ For remote images.
 
 # StyleSheet
 [Documentation](https://reactnative.dev/docs/stylesheet)
+
+## Inline Style
+```
+<View style={{
+  backgroundColor: "dodgerblue",
+  flex: 1
+}}></View>
+```
+
+## StyleSheet Object
 ```
 import React from 'react';
 import {StyleSheet, Text, View} from 'react-native';
@@ -324,4 +344,33 @@ const page = StyleSheet.create({
     color: '#000',
   },
 });
+```
+
+## Flex
+### Alignment
+```
+<View style={{
+  flex: 1, // 100%
+  flexDirection: "row", // Horizontal
+  justifyContent: "center", // Position of contents on the primary axis, based on flexDirection value.
+  alignItems: "center", // Position of items (each line) on the secondary axis, based on flexDirection value.
+  alignContent: "center", Position of contents on the secondary axis, based on flexDirection value.
+  alignSelf: "flex-start", // Position of the current object within the container.
+}} />
+```
+
+### Wrapping
+```
+<View style={{
+  flexWrap: "wrap"
+}} />
+```
+
+### Size
+```
+<View style={{
+  flexBasis: 100, // Width or height.
+  flexGrow: 1, // Take as much room as possible.
+  flexShrink: 1, // Shrink object if need more room on the line without wrapping.
+}} />
 ```
