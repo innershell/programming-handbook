@@ -5,7 +5,7 @@
 # Development Environment
 - [Expo](https://expo.dev) - Set of tools and a framework that sits on top of React Native that hides a lot of complexity from us. This also means that you cannot work with the native APIs of Android/iOS and will be limited by what Expo gives you for native features. Expo does give you a lot of native features without having to learn Java/Kotlin or Swift.
   - [Expo Documentation](https://docs.expo.dev/)
-  - [Expo Go](https://expo.dev/go)
+  - [Expo Go](https://expo.dev/go) - Mobile app to run the application.
 - [Snack](https://snack.expo.dev/) - Play with React Native in the browser.
 - [Vite](https://vitejs.dev/guide/) - Packaged build server to get you up and running quickly.
 
@@ -21,21 +21,13 @@
 
 ## Expo
 ```
-which npm
-node -v // Must be v12 or higher.
-npm i -g expo-cli
-expo init <project name> // Choose a managed workflow template.
-npm start // Runs the app in a simulator or publish the project to Expo so that others can test.
-```
-
-```
-which npx
-npm install -g npx
 npx create-expo-app --template
 cd <project folder>
+npm run web
 npm run android
 npm run ios
-npm run web
+
+// --- DELETE ---
 npx expo start
 ```
 
