@@ -31,7 +31,13 @@ Set the default version
 nvm use 19.0.0
 ```
 
+
 # NPM
+## npm vs npx
+- `npm` installs packages both globally and locally for your project. Local installs are placed in `./node_modules/.bin/` directory and added to the `package.json` dependency specifications.
+- `npx` executes (runs) a package without installing locally. This allows you to test different package versions. Can also run directly from GitHub (pretty cool).
+
+## CLI
 Install exact packages & versions from `package.json` and `package-log.json` cleanly. 
 Just note that `npm ci` deletes `node_modules` before starting. But it’s fast!
 ```
