@@ -3,19 +3,45 @@
 - [React Native Core Components and APIs](https://reactnative.dev/docs/components-and-apis)
 
 # Development Environment
-- [Expo Go](https://expo.dev/go) ([Docs](https://docs.expo.dev/))
+- [Expo](https://expo.dev) - Set of tools and a framework that sits on top of React Native that hides a lot of complexity from us. This also means that you cannot work with the native APIs of Android/iOS and will be limited by what Expo gives you for native features. Expo does give you a lot of native features without having to learn Java/Kotlin or Swift.
+  - [Expo Documentation](https://docs.expo.dev/)
+  - [Expo Go](https://expo.dev/go)
 - [Snack](https://snack.expo.dev/) - Play with React Native in the browser.
+- [Vite](https://vitejs.dev/guide/) - Packaged build server to get you up and running quickly.
+
+## Extensions
+- React Native Tools by Microsoft
+- React/Native/Redux snippets
+- Prettier - Code formatter by Esben Peterson // Turn on "Format on Save" for VSCode
+- Material Icon Theme by Philip Kief (for VSCode file icons)
 
 ## npm vs npx
 - `npm` installs packages both globally and locally for your project. Local installs are placed in `./node_modules/.bin/` directory and added to the `package.json` dependency specifications.
 - `npx` executes (runs) a package without installing locally. This allows you to test different package versions. Can also run directly from GitHub (pretty cool).
-## Expo Go
+
+## Expo
+```
+which npm
+node -v // Must be v12 or higher.
+npm i -g expo-cli
+expo init <project name> // Choose a managed workflow template.
+npm start // Runs the app in a simulator or publish the project to Expo so that others can test.
+```
+
 ```
 which npx
 npm install -g npx
 npx create-expo-app AwesomeProject
 cd AwesomeProject
 npx expo start
+```
+
+## Vite
+```
+npm create vite@latest\
+cd <project folder>
+npm install // or npm i
+npm run dev // from inside the folder
 ```
 
 # Component
