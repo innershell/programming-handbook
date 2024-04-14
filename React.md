@@ -295,3 +295,33 @@ For remote images.
   }}
 />
 ```
+
+# StyleSheet
+[Documentation](https://reactnative.dev/docs/stylesheet)
+```
+import React from 'react';
+import {StyleSheet, Text, View} from 'react-native';
+
+const App = () => (
+  <View style={container}> // First method to reference
+    <Text style={text}>React Native</Text>
+  </View>
+
+
+  <View style={page.container}> // Second method to reference
+    <Text style={page.text}>React Native</Text>
+  </View>
+);
+
+const page = StyleSheet.create({
+  container: {
+    flex: 1,
+    padding: 24,
+    backgroundColor: '#fff',
+  },
+  text: {
+    fontSize: 30,
+    color: '#000',
+  },
+});
+```
