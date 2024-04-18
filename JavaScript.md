@@ -69,6 +69,12 @@ import {
 ## Anonymous Functions 
 `const variable_name = function(parameters) { your_code_here }`
 
+## Spread Syntax
+The spread `(...)` syntax allows an iterable, such as an array or string, to be expanded in places where zero or more arguments (for function calls) or elements (for array literals) are expected. In an object literal, the spread syntax enumerates the properties of an object and adds the key-value pairs to the object being created. ([Link](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax))
+
+## && Expression
+`true && expression` always evaluates to `expression`, and `false && expression` always evaluates to false.
+
 # Console
 ## Logging Hacks
 https://www.sitepoint.com/beyond-console-log-level-up-your-debugging-skills/ 
