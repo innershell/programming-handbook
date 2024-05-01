@@ -66,6 +66,7 @@ FROM node:19-alpine       // Define your base image. This is a node+Alpine linux
 COPY package.json /app/   // Copy a file into the /app folder
 COPY src /app/            // Copy a folder into the /app folder
 WORKDIR /app              // cd into the /app folder
+EXPOSE 4000               // Allow port 4000 for traffic
 RUN npm install           // Download and install the node dependencies into the container's /app folder
 CMD ["node", "server.js"] // The last command to execute in the container
 ```
