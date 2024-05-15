@@ -24,7 +24,7 @@ It is very common to build an application where users have different roles, mean
 * A user's role should be contained within the authentication token.
 * Automatically determine the user's role inside the API and branch the code accordingly.
 
-Errors
+# Errors
 ```
 HTTP/2 409 CONFLICT
 {
