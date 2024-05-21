@@ -285,6 +285,39 @@ For images that will be packaged with the bunder.
 <image source={require("./assets/icon.png")} />
 ```
 
+## Lists
+### FlatList
+- `DATA` is defined as an array of objets with 3 keys-values.
+- Item separator can be added.
+- Index is shown.
+```
+<FlatList
+  scrollEnabled={false} // Workaround needed for nested VirtualLists inside a ScrollView warning.
+  style={{ width: "100%" }}
+  data={ DATA }
+  renderItem={({ item, index }) => (
+    <Row index={index} colA={item[0]} colB={item[1]} colC={item[2]} />
+  )}
+  ItemSeparatorComponent={() => {
+    return <View style={{ width: 10 }} />;
+  }}
+/>
+```
+### Map
+```
+{DATA.map((item, index) => {
+  return (
+    <Row
+      key={index}
+      index={index}
+      colA={item[0]}
+      colB={item[1]}
+      colC={item[2]}
+    />
+  );
+})}
+```
+
 For remote images.
 ```
 <image
