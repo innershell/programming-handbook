@@ -61,7 +61,7 @@ $$ LANGUAGE plpgsql;
 ```
 
 ### Dollar-Quoted String Constants
-The body of a function is a string literal. Dollar-quoting is a PostgreSQL-specific alternative for single quotes to avoid escapting of nested single quotes. If you had used single quotes for the function body, you'd also have to escape all nested single quotes.
+The body of a function is a string literal. [Dollar-quoting](https://www.postgresql.org/docs/current/sql-syntax-lexical.html#SQL-SYNTAX-DOLLAR-QUOTING) is a PostgreSQL-specific alternative for single quotes to avoid escapting of nested single quotes. If you had used single quotes for the function body, you'd also have to escape all nested single quotes.
 
 Instead of this...
 ```
@@ -108,6 +108,23 @@ EXECUTE
 ```
 
 # Data Types
+These are the most commonly used [data types](https://www.postgresql.org/docs/current/datatype.html):
+* integer
+* numeric
+* text
+* boolean
+* date
+* uuid
+* jsonb
+
 ## Casting
+```
+DECLARE
+  num_str string;
+  num_int int;
+BEGIN
+  num_int := CAST(num_str AS numeric);
+  num_int := num_str::numeric;
+```
 
 # JSON Functions and Operations
