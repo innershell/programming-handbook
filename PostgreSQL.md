@@ -44,6 +44,7 @@ WHERE
 ```
 
 ## Functions
+### Stored Procedures
 ```
 CREATE
 OR REPLACE FUNCTION auth.has_role (i_role_name text) RETURNS boolean AS $$
@@ -58,6 +59,37 @@ BEGIN
   RETURN false;
 END;
 $$ LANGUAGE plpgsql;
+```
+
+### Anonymous Functions
+Sometimes, you need 
+```
+CREATE FUNCTION pg_temp.query (OUT result boolean) AS
+$$
+DECLARE
+  -- Declarations
+BEGIN
+  -- Body
+  return true;
+END
+$$ LANGUAGE plpgsql;
+
+select pg_temp.query() as result;
+```
+
+### Anonymous Code Block
+Use an [anonymous code block](https://www.postgresql.org/docs/current/sql-do.html) along with the [temporary parameter](https://www.postgresql.org/docs/current/sql-createtable.html#SQL-CREATETABLE-TEMPORARY) to execute an arbitrary code.
+```
+DO LANGUAGE plpgsql $$ DECLARE
+BEGIN
+execute '
+create temporary table t
+as
+SELECT NOW()
+';
+END $$;
+
+select * from t;
 ```
 
 ### Dollar-Quoted String Constants
@@ -128,3 +160,10 @@ BEGIN
 ```
 
 # JSON Functions and Operations
+| Operator | Description |
+|----------|-------------|
+|`->'text'`|Extracts the object with the given 'key'.|
+|`->>'text'`|Extracts the object with the given 'key'. Result returned as a text datatype.|
+|`->integer`|Extracts the n'th element of a zero-indexed JSON arrray. Negative integers count from the end of the array.|
+|`#>text[]`|Extracts the object at the specified path supplied as an array of either keys (text) or indexes (number).|
+|`#>>text[]`|Extracts the object at the specified path supplied as an array of either keys (text) or indexes (number). Result returned as a text datatype.|
