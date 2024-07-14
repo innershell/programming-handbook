@@ -16,6 +16,22 @@
 ```
 
 ## Tables
+### Describe
+The definition of a table is stored in a `column` view in the `information_schema`. Records from the `column` view will give you everything you need.
+
+The basic query for all table attribues.
+```
+SELECT * FROM information_schema.columns WHERE table_name = 'your_table_name';
+```
+
+A more useful query to describe the table.
+```
+SELECT column_name, data_type, character_maximum_length FROM information_schema. columns WHERE table_name = 'your_table_name';
+```
+
+
+
+## Views
 ### Drop
 ```
 DROP VIEW v_tenant_user;
