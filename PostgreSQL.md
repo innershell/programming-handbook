@@ -17,7 +17,9 @@
 
 ## Console Output
 To print [errors or messages](https://www.postgresql.org/docs/current/plpgsql-errors-and-messages.html) to the execution console.
-`RAISE NOTICE 'SQL: %', sql;`
+```
+RAISE NOTICE 'SQL: %', sql;
+```
 
 ## Tables
 ### Describe
