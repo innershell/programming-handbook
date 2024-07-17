@@ -15,6 +15,10 @@
 -------------------------------
 ```
 
+## Console Output
+To print [errors or messages](https://www.postgresql.org/docs/current/plpgsql-errors-and-messages.html) to the execution console.
+`RAISE NOTICE 'SQL: %', sql;`
+
 ## Tables
 ### Describe
 The definition of a table is stored in a `column` view in the `information_schema`. Records from the `column` view will give you everything you need.
