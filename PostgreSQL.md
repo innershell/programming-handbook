@@ -32,15 +32,17 @@ SELECT * FROM information_schema.columns WHERE table_name = 'your_table_name';
 
 A more useful query to describe the table.
 ```
-SELECT column_name, data_type, character_maximum_length FROM information_schema. columns WHERE table_name = 'your_table_name';
+SELECT column_name, data_type, character_maximum_length
+FROM information_schema.columns
+WHERE table_name = 'your_table_name';
 ```
 
 
 
 ## Views
-### Drop
+### Find/Listing
 ```
-DROP VIEW v_tenant_user;
+select * from pg_views;
 ```
 
 ### Create
@@ -63,6 +65,34 @@ FROM
   public.user_profile
 WHERE
   tenant_user.user_id = user_profile.user_id;
+```
+
+### Drop
+```
+DROP VIEW v_tenant_user;
+```
+# Select Statements
+```
+SELECT
+  DISTINCT ON (name, uom) *,
+  CASE WHEN tenant_id = 0 THEN true ELSE false END AS is_override
+FROM x1_dev_1_marker
+WHERE tenant_id = 0 or tenant_id = 1
+ORDER BY name ASC, uom ASC,  tenant_id DESC;
+```
+
+```
+SELECT
+    viewname,
+    CASE
+        WHEN viewname like '%dev%' THEN 'dev'
+        WHEN viewname like '%test%' THEN 'test'
+        ELSE 'live' END
+    AS data_source
+FROM pg_views
+WHERE schemaname = 'public'
+AND viewname LIKE '%marker'
+ORDER BY viewname;
 ```
 
 ## Functions
