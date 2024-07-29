@@ -71,7 +71,7 @@ WHERE
 ```
 DROP VIEW v_tenant_user;
 ```
-# Select Statements
+## Select Statements
 ```
 SELECT
   DISTINCT ON (name, uom) *,
@@ -93,6 +93,14 @@ FROM pg_views
 WHERE schemaname = 'public'
 AND viewname LIKE '%marker'
 ORDER BY viewname;
+```
+
+## Update Statements
+This is more for updating jsonb columns.
+```
+update mvpw1_dev_1
+set xdo = jsonb_set(xdo, '{tenant_id}', to_jsonb(1), false)
+where (xdo->>'tenant_id') = '0';
 ```
 
 ## Functions
