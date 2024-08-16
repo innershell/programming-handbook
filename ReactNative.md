@@ -36,8 +36,18 @@ npm run dev // from inside the folder
 - React/Native/Redux snippets
 - Prettier - Code formatter by Esben Peterson // Turn on "Format on Save" for VSCode
 - Material Icon Theme by Philip Kief (for VSCode file icons)
+- indent-rainbow by oderwat
 
-# Component
+## Debugging
+### With Google Chrome Browser
+- Enable [React Native Remote Debugging](https://reactnative.dev/docs/debugging) on Android Virtual Device.
+
+### With Visual Studio Code
+- Enable [React Native Remote Debugging](https://reactnative.dev/docs/debugging) on Android Virtual Device.
+- Install React Native Tools
+
+
+# React native Component
 Create a folder `Components` in your app `src` folder.
 
 ## Method 1
