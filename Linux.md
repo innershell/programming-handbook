@@ -1,3 +1,13 @@
+# File Structure
+## Installed Apps
+`/usr/local/` for your user profile
+`/opt/` for shared users
+
+# Installing Apps
+1. Download your app (*.tar.gz) from a reputable website.
+2. Unpack the .tar.gz file you downloaded to an appropriate location (see **File Structure** above).
+3. Execute the *.sh file.
+
 # Package Manager
 A cheat sheet of the package manager name and usage options for each platform.
 
