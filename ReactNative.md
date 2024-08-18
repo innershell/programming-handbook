@@ -19,7 +19,7 @@ npm run android
 npm run ios
 ```
 
-Run these commands to upgrade Expo SDK
+Run these commands to install Expo SDK
 ```
 # Install latest
 npm install expo@latest
@@ -29,6 +29,11 @@ npm install expo@51
 
 # Upgrade dependencies to match installed SDK version
 npx expo install --fix
+```
+
+Run these commands to upgrade Expo SDK
+```
+expo-cli upgrade
 ```
 
 If the Expo SDK version changes, it may not be compatible with Expo Go anymore. Cleanup and upgrade your project as follows:
