@@ -13,12 +13,33 @@
 ```
 npx create-expo-app --template
 cd <project folder>
+npx expo start
 npm run web
 npm run android
 npm run ios
+```
 
-// --- DELETE ---
-npx expo start
+Run these commands to upgrade Expo SDK
+```
+# Install latest
+npm install expo@latest
+
+# Install a specific SDK version
+npm install expo@51
+
+# Upgrade dependencies to match installed SDK version
+npx expo install --fix
+```
+
+If the Expo SDK version changes, it may not be compatible with Expo Go anymore. Cleanup and upgrade your project as follows:
+```
+# Reinstall dependencies.
+npm cache verify
+npm cache clean --force
+rm -rf node_modules/
+rm package-lock.json
+npm install
+npx expo start -c
 ```
 
 ## Vite
