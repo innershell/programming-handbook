@@ -19,6 +19,7 @@ A cheat sheet of the package manager name and usage options for each platform.
 | **Find Package** | `apt search pkg` | `pacman -S pkg` <br> `yay pkg` | `dnf search pkg` |
 | **Install** | `apt install pkg` | `pacman -Ss pkg` <br> `yay pkg` | `dnf install pkg` |
 | **Uninstall** | `apt remove pkg` | `pacman -Rsu pkg` <br> `yay -R pkg` | `dnf remove pkg` |
+| **Package No Longer in Repos** | | `pacman -Qm` | |
 | **Remove Depencencies** | `apt autoremove` | `pacman -Qtdq \| sudo pacman -Rns -` | `dnf autoremove` |
 | **Remove Package Cache** | | `pacman -Scc` | |
 
