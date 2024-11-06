@@ -35,3 +35,4 @@
 |[Captions](https://www.captions.ai/)|Generate talking videos.|
 |[HeyGen](https://www.heygen.com/)|Video creator with avatar.|
 |[OpusClip](https://www.opus.pro/)|Repurpose long-form videos into shorts.|
+|[Katalist](https://www.katalist.ai/)|Movies from an idea.|
