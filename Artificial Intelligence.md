@@ -27,6 +27,8 @@
 |------|---------|
 |[Flux Schnell](https://replicate.com/black-forest-labs/flux-schnell)|Image generator.|
 |[Ideogram](https://ideogram.ai/)|Image generator.|
+|[unDraw](https://undraw.co/)|Open source illustrations. *Not AI*|
+|[Lummi](https://www.lummi.ai/)|Free AI stock images.|
 
 ## Audio Tools
 | Tool | Purpose |
