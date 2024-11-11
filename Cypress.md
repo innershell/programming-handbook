@@ -1,4 +1,15 @@
-# Reading InnerHTML Contents of an Object
+# Installation
+```
+npm install cypress --save-dev
+```
+
+# Open Cypress
+```
+npx cypress open
+```
+
+# Cheatsheet
+## Reading InnerHTML Contents of an Object
 The way it works is by invoking the 'text' function.
 ```
 cy.get('#text-new-patient-error-message').invoke('text').then(error => {
@@ -6,7 +17,7 @@ cy.get('#text-new-patient-error-message').invoke('text').then(error => {
 })
 ```
 
-# Things to Do with Cypress Objects
+## Things to Do with Cypress Objects
 ```
 .type('<some text>')   // Type in some text.
 .click()               // Click the the object.
@@ -15,7 +26,7 @@ cy.get('#text-new-patient-error-message').invoke('text').then(error => {
 .find('p')             // Find an element within the found object.
 ```
 
-# Exception Handling
+## Exception Handling
 https://www.lambdatest.com/learning-hub/exception-handling-in-cypress
 ```
 cy.on('uncaught:exception', (err, runnable) => {
@@ -25,5 +36,6 @@ cy.on('uncaught:exception', (err, runnable) => {
     return false // Do not log the error to the command log.
 })
 ```
-# Button Click
+
+## Button Click
 [Cypress.io - Blog - Button Click Issues](https://www.cypress.io/blog/2019/01/22/when-can-the-test-click)
