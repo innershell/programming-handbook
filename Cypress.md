@@ -8,6 +8,12 @@ npm install cypress --save-dev
 npx cypress open
 ```
 
+# Best Practices
+https://docs.cypress.io/app/core-concepts/best-practices
+1. Every test should start from the same state and be [run independently](https://docs.cypress.io/app/core-concepts/best-practices#Having-Tests-Rely-On-The-State-Of-Previous-Tests) from one another. That is, when testing a page, each test will start from the base URL. You shouldn't be "chaining" tests and having to rely on the state of the previous tests.
+2. [ Programmatically login](https://docs.cypress.io/app/core-concepts/best-practices#Organizing-Tests-Logging-In-Controlling-State) to your application, take control of your application state, and go directly to the page being tested.
+3. Give your test element a [test attribute](https://docs.cypress.io/app/core-concepts/best-practices#Selecting-Elements) that is only used for testing.
+
 # Cheatsheet
 ## Reading InnerHTML Contents of an Object
 The way it works is by invoking the 'text' function.
