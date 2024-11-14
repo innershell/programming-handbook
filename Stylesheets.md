@@ -21,7 +21,7 @@
 | Role | Usage |
 |------|-------|
 | Primary | Headings |
-| Secondary | Headings |
+| Secondary | Subtle Headings |
 | Text | Non-headings |
 | Accent | Buttons, Links, CTAs |
 | On Primary | Opposite of Primary |
