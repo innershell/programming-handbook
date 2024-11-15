@@ -62,3 +62,14 @@ it("Testing a Request Interception", () => {
   cy.visit("/"); 
 });
 ```
+
+## Handling HTTP Status Codes
+```
+cy.request({
+  method: "GET",
+  url: "patient/documents",
+  failOnStatusCode: false,
+}).then((response) => {
+  expect(response.status).to.not.be.within(200, 209); // Error 404 Not Found
+});
+```
