@@ -73,3 +73,12 @@ cy.request({
   expect(response.status).to.not.be.within(200, 209); // Error 404 Not Found
 });
 ```
+
+## Fetching Text by Invoking the Its Function
+```
+cy.get('[ut-data="page-title"]')
+  .invoke("text")
+  .then((tenant) => {
+    cy.wrap(tenant).should("include", "Page Not Found");
+  });
+```
