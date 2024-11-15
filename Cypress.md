@@ -45,3 +45,20 @@ cy.on('uncaught:exception', (err, runnable) => {
 
 ## Button Click
 [Cypress.io - Blog - Button Click Issues](https://www.cypress.io/blog/2019/01/22/when-can-the-test-click)
+
+# Code Samples
+Command: [intercept()](https://docs.cypress.io/api/commands/intercept)
+## Inspect Network Requests
+```
+it("Testing a Request Interception", () => {
+  // Setup the intercept to confirm that the request status code is 200.
+  cy.intercept("GET", "/", (req) => {
+    req.continue((res) => {
+      expect(res.statusCode).to.eq(200);
+    });
+  });
+
+  // Visit the root URL to trigger the intercept.
+  cy.visit("/"); 
+});
+```
