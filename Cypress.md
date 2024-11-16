@@ -150,3 +150,25 @@ cy.get('[ut-data="page-title"]')
     cy.wrap(tenant).should("include", "Page Not Found");
   });
 ```
+
+This might also work. Verify.
+```
+cy.get('span').then(($span) => {
+  const text = $span.text();
+  // Perform actions with the text
+  cy.log(text); // Example action: logging the text to the console
+});
+
+```
+
+## Iterating
+`.children()` gets the children of the object in context.
+`.each()` loops through each children queried.
+
+```
+cy.get('div.parent').children().each(($child, index, $list) => {
+  // Perform actions on each child element
+  cy.wrap($child).click(); // Example action: clicking each child element
+});
+```
+[Cypress documentation.](https://docs.cypress.io/api/commands/each)
