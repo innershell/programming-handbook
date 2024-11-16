@@ -64,6 +64,9 @@ should('be.greaterThan, 0);
 should('be.within', 0, 1);
 should('have.property', 'id');
 should('have.string', 'abc');
+should('have.text', 'abc');
+should('contain.text', 'abc');
+should('be.oneOf', [404, 502]);
 ```
 
 # Actions
