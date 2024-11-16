@@ -151,14 +151,10 @@ cy.get('[ut-data="page-title"]')
   });
 ```
 
-This might also work. Verify.
+This also works
 ```
-cy.get('span').then(($span) => {
-  const text = $span.text();
-  // Perform actions with the text
-  cy.log(text); // Example action: logging the text to the console
-});
-
+cy.get('[ut-data="page-title"]').should("contain.text", "Page Not Found");
+cy.get('[ut-data="page-title"]').should("have.text", "Page Not Found");
 ```
 
 ## Iterating
