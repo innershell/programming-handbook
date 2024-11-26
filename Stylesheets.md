@@ -25,10 +25,16 @@ em = px / px (font)
 | Role | Usage |
 |------|-------|
 | Primary | Headings |
+| Primary - On Primary | Opposite of Primary |
 | Secondary | Subtle Headings |
-| Text | Non-headings |
+| Secondary - On Secondary | Opposite of Secondary |
+| Text - Primary | Body text |
+| Text - Secondary | Hint text, captions, footnotes |
 | Accent | Buttons, Links, CTAs |
-| On Primary | Opposite of Primary |
-| On Secondary | Opposite of Secondary |
+| Accent - On Accent | Opposite of Accent |
+| Error - Container | Error background |
+| Error - On Container | Error text |
+
+
 | Accent Background | Subtle background using a lighter tone of the accent colour |
 | Contrast Background | Punchy backround using a darker tone of the accent colour |
