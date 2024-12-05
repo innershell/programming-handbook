@@ -30,10 +30,13 @@ em = px / px (font)
 | Secondary - On Secondary | Opposite of Secondary |
 | Text - Primary | Body text |
 | Text - Secondary | Hint text, captions, footnotes |
+| Text - Hyperlink | |
 | Accent | Buttons, Links, CTAs |
 | Accent - On Accent | Opposite of Accent |
 | Error - Container | Error background |
 | Error - On Container | Error text |
+| Danger | |
+| Danger - On Danger | |
 
 
 | Accent Background | Subtle background using a lighter tone of the accent colour |
