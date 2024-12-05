@@ -6,5 +6,8 @@
 4. The state will automatically be set by the datagrid component as the 'edit' pencil is clicked.
 
 ## Checkbox Component
-1. Add a new toggle named `Is Datagrid Readonly?`
-2. Add a workflow to toggle when the Edit, Save, or Cancel button in the row is clicked.
+1. Add a new input field named `Editable Datagrid Row ID?`
+2. Add a workflow to Edit (Pencil) button that changes the `Editable Datagrid Row ID?` field value to the `Unique id` of the row.
+3. Add a workflow to the Save and Cancel buttons that clears the `Editable Datagrid Row ID?` field value.
+4. Bind the checkbox component's `Read only` property where the `Editable Datagrid Row ID?` != `Unique id`.
+
