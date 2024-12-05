@@ -6,3 +6,5 @@
 4. The state will automatically be set by the datagrid component as the 'edit' pencil is clicked.
 
 ## Checkbox Component
+1. Add a new toggle named `Is Datagrid Readonly?`
+2. Add a workflow to toggle when the Edit, Save, or Cancel button in the row is clicked.
