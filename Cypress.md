@@ -65,7 +65,7 @@ should('be.within', 0, 1);
 should('have.property', 'id');
 should('have.string', 'abc');
 should('have.text', 'abc');
-should('contain.text', 'abc');
+should('contain.text', 'abc'); // Ideal for <p> or <span> tags.
 should('be.oneOf', [404, 502]);
 ```
 
@@ -143,6 +143,11 @@ cy.request({
 }).then((response) => {
   expect(response.status).to.not.be.within(200, 209); // Error 404 Not Found
 });
+```
+
+## Fetching Text Without Invocation
+```
+cy.get('[ut-data="page-title"]').should("contain.text", "My Page Title");
 ```
 
 ## Fetching Text by Invoking the Its Function
