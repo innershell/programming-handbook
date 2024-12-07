@@ -5,8 +5,18 @@ px = em * px (font)
 em = px / px (font)
 
 # Fonts
-"SF Pro Display", "SF Pro Icons", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+## Family
+| Name | Description |
+|------|-------------|
+| Inter | Figma's default font. |
+| Space Grotesk | Danny's font for headlines. |
+| Roboto | Google's Material font. |
+| SF Pro Display | Apple's font. |
+| SF Pro Icons | |
+| Helvetica Neue | |
+| Helvetica | |
 
+## Sizes
 | Class | Size | Height | Weight | Letter Spacing | Usage |
 |-------|------|--------|--------|----------------|-------|
 | Headline | 56px | 60px | 600 (Semi Bold) | -0.28px | Hero title |
@@ -21,7 +31,7 @@ em = px / px (font)
 | Footnote | 12px | 16px | 400 (Normal) | 0.12px | Footnotes |
 
 
-# Colour Roles
+# Colours
 | Role | Usage |
 |------|-------|
 | Primary | Headings |
