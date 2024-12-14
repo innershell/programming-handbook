@@ -3,9 +3,10 @@
 npm install cypress --save-dev
 ```
 
-# Open Cypress
+# CLI
 ```
-npx cypress open
+npx cypress open // Opens the UI
+npx cypress run // Runs all tests on the CLI
 ```
 
 # Commands Table of Contents
