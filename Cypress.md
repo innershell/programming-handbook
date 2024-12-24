@@ -120,7 +120,8 @@ cy.on('uncaught:exception', (err, runnable) => {
 
 # Code Samples
 Command: [intercept()](https://docs.cypress.io/api/commands/intercept)
-## Inspect Network Requests
+## Intercept and Inspect Network Requests
+### Method 1
 ```
 it("Testing a Request Interception", () => {
   // Setup the intercept to confirm that the request status code is 200.
@@ -132,6 +133,34 @@ it("Testing a Request Interception", () => {
 
   // Visit the root URL to trigger the intercept.
   cy.visit("/"); 
+});
+```
+
+### Method 2
+```
+cy.intercept(
+  "POST",
+  "https://xt5n-qqwz-eogp.n7c.xano.io/api:WaAAT7LF/patients"
+).as("postRequest");
+
+cy.get("#btn-new-patient-create").click();
+
+// Wait for the POST request to complete and check the status
+cy.wait("@postRequest").then((interception) => {
+  expect(interception.response.statusCode).to.eq(200);
+});
+```
+
+### Method 3
+```
+cy.request({
+  method: "DELETE",
+  url: `${settings.api_base_url}/patients/${uuid}?x-data-source=${settings.data_source}`,
+  headers: {
+    authorization: `Bearer ${Cypress.env(settings.env.tokens.api)}`,
+  },
+}).then((response) => {
+  expect(response.status).to.eq(200);
 });
 ```
 
