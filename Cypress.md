@@ -121,7 +121,7 @@ cy.on('uncaught:exception', (err, runnable) => {
 # Code Samples
 Command: [intercept()](https://docs.cypress.io/api/commands/intercept)
 ## Intercept and Inspect Network Requests
-### Method 1
+### Method 1 - Bundle Intercept and Response Check
 ```
 it("Testing a Request Interception", () => {
   // Setup the intercept to confirm that the request status code is 200.
@@ -136,7 +136,7 @@ it("Testing a Request Interception", () => {
 });
 ```
 
-### Method 2
+### Method 2 - Using an Intercept Alias
 ```
 cy.intercept(
   "POST",
@@ -151,7 +151,7 @@ cy.wait("@postRequest").then((interception) => {
 });
 ```
 
-### Method 3
+### Method 3 - Simple Request/Response Check
 ```
 cy.request({
   method: "DELETE",
@@ -161,6 +161,30 @@ cy.request({
   },
 }).then((response) => {
   expect(response.status).to.eq(200);
+});
+```
+
+### Method 4 - Using Alias and Inspecting Response Body
+```
+describe('Login Functionality', () => {
+  it('should successfully log in and receive a 200 status code', () => {
+    // Intercept the login POST request
+    cy.intercept('POST', '/api/login').as('loginRequest');
+
+    // Fill in the login form and submit it
+    cy.get('input[name="username"]').type('your-username');
+    cy.get('input[name="password"]').type('your-password');
+    cy.get('form').submit();
+
+    // Wait for the login request to complete and check the status
+    cy.wait('@loginRequest').then((interception) => {
+      expect(interception.response.statusCode).to.eq(200);
+
+      // Optionally, you can also check the response body for a token or user data
+      expect(interception.response.body).to.have.property('token');
+      expect(interception.response.body).to.have.property('user');
+    });
+  });
 });
 ```
 
