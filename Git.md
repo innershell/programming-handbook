@@ -1,6 +1,6 @@
 # Starting
 ## Initiate Git Repository
-Create a folder on local drive where your working source files will be placed. This will initiatlive the current folder as a Git repository.
+Create a folder on local drive where all of your working source files will be placed (e.g., Source). This will initialize the current folder as a Git repository.
 
 	git init
 
