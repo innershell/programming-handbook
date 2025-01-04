@@ -219,9 +219,16 @@ cy.get('[ut-data="page-title"]').should("contain.text", "Page Not Found");
 cy.get('[ut-data="page-title"]').should("have.text", "Page Not Found");
 ```
 
-## Iterating
+## Working With Tables and Arrays
+### Iterating
 `.children()` gets the children of the object in context.
 `.each()` loops through each children queried.
+`.first()` gets the first child.
+`.last()` gets the last child.
+`.eq(index)` gets the [child at the specified index](https://docs.cypress.io/api/commands/eq).
+`.within()` scopes all subsequent commands to within this element.
+`.parent()` gets the parent element.
+`.siblings()` gets all sibling elements.
 
 ```
 cy.get('div.parent').children().each(($child, index, $list) => {
@@ -229,4 +236,4 @@ cy.get('div.parent').children().each(($child, index, $list) => {
   cy.wrap($child).click(); // Example action: clicking each child element
 });
 ```
-[Cypress documentation.](https://docs.cypress.io/api/commands/each)
+
