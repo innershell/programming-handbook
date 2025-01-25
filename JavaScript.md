@@ -23,6 +23,15 @@ Use the `<script>` tag in the header to encapsulate or reference to the external
   <script src="resources/js/donor-bus-logic.js"></script> 
 </head>
 ```
+
+### Dynamically
+```
+document.body.appendChild(Object.assign(document.createElement('script'), {
+  type: 'text/javascript',
+  src: 'https://cdnjs.cloudflare.com/ajax/libs/datejs/1.0/date.min.js',
+  onload: () => this.onScriptLoaded()
+}));
+```
 # Imports and Exports
 Here’s a cheatsheet to show you the different ways of exporting and the corresponding way to import it. It really distills to 3 types: name, default, and list. Just make sure your export matches your import way and you will have no problem.
 ```
