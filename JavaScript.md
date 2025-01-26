@@ -26,10 +26,13 @@ Use the `<script>` tag in the header to encapsulate or reference to the external
 
 ### Dynamically
 ```
-document.body.appendChild(Object.assign(document.createElement('script'), {
-  type: 'text/javascript',
-  src: 'https://cdnjs.cloudflare.com/ajax/libs/datejs/1.0/date.min.js',
-  onload: () => this.onScriptLoaded()
+const script = document.createElement('script');
+script.type = 'text/javascript';
+script.src = 'https://securebancard.transactiongateway.com/token/Collect.js';
+script.setAttribute('data-tokenization-key', 'your-token-code-here');
+script.setAttribute('data-variant', 'inline');
+script.onload = () => this.onScriptLoaded();
+document.body.appendChild(script);
 }));
 ```
 # Imports and Exports
