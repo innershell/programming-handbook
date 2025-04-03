@@ -6,9 +6,9 @@ Create a folder on local drive where all of your working source files will be pl
 
 
 ## Configure User Profile
-  
-	$ git config --global user.name 'Melvin Tan'
-	$ git config --global user.email 'innershell@gmail.com'
+```
+git config --global user.name 'Melvin Tan' & git config --global user.email 'innershell@gmail.com'
+```
 
 ## Fetch Repo
 
