@@ -2,6 +2,7 @@
 
 ## Basics
 ### Install Playwright
+Navigate to your project's source code folder and install Playwright.
 ```
 npm init playwright@latest
 ```
@@ -22,7 +23,12 @@ test('API request should return 200 status', async ({ request }) => {
     expect(body.id).toBe(1);
 });
 ```
-### Run the Test
+### Run the Test on CLI
 ```
 npx playwright test
+```
+
+## Run the Test on UI
+```
+npx playwright test --ui
 ```
