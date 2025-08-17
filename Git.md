@@ -10,6 +10,12 @@ Create a folder on local drive where all of your working source files will be pl
 git config --global user.name 'Melvin Tan' & git config --global user.email 'innershell@gmail.com'
 ```
 
+This creates a `.gitconfig` file with the following contents:
+```
+[user]
+    name = Melvin Tan
+    email = innershell@gmail.com
+```
 ## Fetch Repo
 
 	git clone https://<username>:<personal-access-token>@github.com/innershell/respository-name.git
