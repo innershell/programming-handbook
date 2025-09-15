@@ -57,7 +57,22 @@ This section lists AI-first tools aimed at business development, sales, and mark
 | [Jasper](https://www.jasper.ai/)           | Generative marketing and long-form content engine with templates, brand voice controls, and SEO-focused features; widely used for blog, ad, and campaign copy.    |
 | [Copy.ai](https://www.copy.ai/)            | Quick marketing copy generator for ads, emails, and social content; simple prompts and templates for rapid creative iterations.                                   |
 
-## Content Creation
+### Cybersecurity
+
+AI-driven security tools for threat detection, cloud posture, vulnerability scanning, and SOC automation — useful for reducing alert noise, prioritizing risk, and accelerating response.
+
+| Tool                                                    | Strengths                                                                                                                                                         |
+| ------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [Darktrace](https://www.darktrace.com/)                 | Unsupervised anomaly detection across network, cloud and email; praised for identifying novel threats and reducing mean-time-to-detect with autonomous responses. |
+| [CrowdStrike Falcon](https://www.crowdstrike.com/)      | Cloud-native EDR with strong telemetry, threat intelligence and fast detection/response workflows; widely used for endpoint protection and incident response.     |
+| [SentinelOne Singularity](https://www.sentinelone.com/) | Autonomous endpoint detection and remediation with rollback and AI-driven hunting; valued for low-latency response and automation.                                |
+| [Vectra AI](https://www.vectra.ai/)                     | Network detection and response using behavioral AI to detect lateral movement and command-and-control activity; good for SOC prioritization.                      |
+| [Wiz](https://www.wiz.io/)                              | Agentless cloud security posture management and risk prioritization that surfaces exploitable cloud misconfigurations and vulnerable workloads.                   |
+| [Orca Security](https://orca.security/)                 | Agentless cloud workload protection with rich context and prioritization across host, container and IAM risks; fast time-to-value for cloud teams.                |
+| [Hunters](https://www.hunters.ai/)                      | SOC automation and threat hunting platform that correlates telemetry and automates investigation playbooks using ML to reduce analyst load.                       |
+| [Snyk](https://snyk.io/)                                | Developer-first vulnerability scanning for code, dependencies and IaC with prioritized fixes and CI/CD integration; speeds secure development.                    |
+
+### Content Creation
 
 Tools for generating, editing, and optimizing written content — from short marketing copy to long-form articles and creative writing. This section focuses on AI-first platforms that speed drafting, improve SEO/tone, or help repurpose content for channels.
 
@@ -90,7 +105,7 @@ Image generation and image-editing tools that use generative AI or AI-assisted p
 | [Runway](https://runwayml.com/)                                      | Real-time image & video editing with generative fills, background removal, and multimodal tools for production pipelines.                              |
 | [ClipDrop](https://clipdrop.co/)                                     | Useful suite for photo capture, background removal, and generative fill/cleanup; integrates well with design workflows and quick edits.                |
 
-## Audio Tools
+### Audio Tools
 
 AI-first audio tools for text-to-speech, voice cloning, music generation and audio editing — useful for narration, character voices, podcast production and sonic prototyping.
 
@@ -106,7 +121,7 @@ AI-first audio tools for text-to-speech, voice cloning, music generation and aud
 | [Voicemod](https://www.voicemod.net/)          | Real-time voice transformation and effects for streaming, content creation, and live demos.                                              |
 | [Descript](https://www.descript.com/)          | Transcription-first audio editing with Overdub voice cloning, filler-word removal, and multi-track podcast workflows.                    |
 
-## Video Tools
+### Video Tools
 
 AI-first video platforms and editing tools that generate, edit, or personalize video using generative models — from text-to-video avatars to automated repurposing and generative VFX.
 
