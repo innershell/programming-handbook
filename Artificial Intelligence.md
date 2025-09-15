@@ -1,5 +1,7 @@
-# Generative AI (GenAI) Tools
+# Artificial Intelligence
+
 ## General Purpose
+
 | Tool | Purpose |
 |------|---------|
 |[ChatGPT](https://openai.com/)|All-purpose. General conversation.|
