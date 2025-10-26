@@ -1,5 +1,19 @@
 https://core-electronics.com.au/guides/python-reference-cheat-sheet/
 
+# Installation
+For Arch Linux, install `python` and `python-pip` from the Arch repository using either `yay` or `pacman`.
+```
+yay python
+yay python-pip
+```
+
+For dependency isolation, most Pythons packaged with Linux requires running in a virtual environment.
+```
+python -m venv /home/mtan/Source/project-name
+/home/mtan/Source/project-name/bin/python
+/home/mtna/Source/project-name/bin/pip
+```
+
 # Packages
 Python's package manager is `pip`. Here are some basic commands.
 ```
