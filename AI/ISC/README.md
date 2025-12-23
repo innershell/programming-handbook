@@ -1,0 +1,2 @@
+- [.github](./.github) - Agent settings for GitHub Copilot for Visual Studio Code
+- [.agent](./.agent) - Agent settings for Google Antigravity
