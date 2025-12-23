@@ -3,4 +3,4 @@ applyTo: "**.sql"
 scope: "**.sql"
 ---
 
-> Your guidelines here.
+> Your guidelines text here.
