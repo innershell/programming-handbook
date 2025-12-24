@@ -19,20 +19,33 @@ A compact reference to popular large models and model hubs — their commonly-ci
 | [AI21 / Jurassic](https://www.ai21.com)   | Commercial models often used for long-form generation and creative writing; alternative to larger cloud offerings.                                                            | Commercial                                |
 | [Hugging Face](https://huggingface.co/)   | Central model hub and platform hosting thousands of open and commercial models, with model cards, community contributions, and deployment/inference tooling.                  | Platform (hosts open & commercial models) |
 
+## Self-Hosted LLM
+
+| Tool                                         | Strengths                                                                                                                  |
+| :------------------------------------------- | :------------------------------------------------------------------------------------------------------------------------- |
+| [LM Studio](https://lmstudio.ai/)            | Offers a polished desktop GUI for easily searching, downloading, and running local LLMs with minimal setup.                |
+| [Msty](https://msty.ai/)                     | Provides a clean and intuitive interface for managing local AI models and organizing conversations efficiently.            |
+| [Open WebUI](https://openwebui.com/)         | Delivers a highly customizable, self-hosted web interface with a ChatGPT-like experience and support for various backends. |
+| [Ollama](https://ollama.com/)                | Serves as a lightweight and efficient framework for running and managing local language models via a simple CLI.           |
+| [Jan](https://www.jan.ai/)                   | Focuses on privacy and local-first principles, offering an open-source desktop client that runs models completely offline. |
+| [Maestro](https://github.com/LM-Kit/Maestro) | Enables developers to orchestrate local LLMs for complex task automation and structured workflow management.               |
+
 ## Special Purpose
 
 ### Integrated Development Environments (IDEs)
 
 This section lists developer environments and IDE-like tools that include AI assistance (autocompletion, chat helpers, refactoring, scaffolding, and collaboration). Use it to compare strengths and whether a tool is primarily cloud-hosted, a local application, or an editor/plugin.
 
-| Tool                              | Strengths                                                                                                                                                     | Type   |
-| --------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------ |
-| [Cursor](https://www.cursor.com/) | AI-native code editor praised for context-aware completions, in-editor chat, project-wide code navigation, and refactor aids that speed development.          | Cloud  |
-| [WindSurf](https://windsurf.com/) | Lightweight cloud IDE often cited for quick environment setup and real-time collaboration, useful for prototyping and remote pairing.                         | Cloud  |
-| [Cline](https://cline.bot/)       | Chat-first coding assistant valued for rapid script/snippet generation, command-line automation help, and workflow integrations.                              | Plugin |
-| [Replit](https://replit.com/)     | Browser-based IDE with instant run, built-in hosting, multiplayer collaboration and an AI assistant (Ghostwriter); popular for teaching and quick prototypes. | Cloud  |
-| [Bolt](https://bolt.new/)         | Minimal, fast project scaffolding and starter templates that let developers spin up projects quickly; praised for developer velocity.                         | Cloud  |
-| [Lovable](https://lovable.dev/)   | Simple AI-assisted sandbox for bootstrapping projects and onboarding; users like its approachable UI and lightweight workflow.                                | Cloud  |
+| Tool                                       | Strengths                                                                                                                                                                          | Type    |
+| ------------------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------- |
+| [Antigravity](https://antigravity.google/) | AI-native code editor featuring asynchronous agents, context awareness, in-editor chat, and in-line chat, with global and workspace rules that allows for large scale development. | Desktop |
+| [Cursor](https://www.cursor.com/)          | AI-native code editor praised for context-aware completions, in-editor chat, project-wide code navigation, and refactor aids that speed development.                               | Desktop |
+| [WindSurf](https://windsurf.com/)          | Lightweight cloud IDE often cited for quick environment setup and real-time collaboration, useful for prototyping and remote pairing.                                              | Desktop |
+| [Cline](https://cline.bot/)                | Chat-first coding assistant valued for rapid script/snippet generation, command-line automation help, and workflow integrations.                                                   | Plugin  |
+| [Replit](https://replit.com/)              | Browser-based IDE with instant run, built-in hosting, multiplayer collaboration and an AI assistant (Ghostwriter); popular for teaching and quick prototypes.                      | Cloud   |
+| [Bolt](https://bolt.new/)                  | Minimal, fast project scaffolding and starter templates that let developers spin up projects quickly; praised for developer velocity.                                              | Cloud   |
+| [Lovable](https://lovable.dev/)            | Simple AI-assisted sandbox for bootstrapping projects and onboarding; users like its approachable UI and lightweight workflow.                                                     | Cloud   |
+| [Xano](https://xano.com/)                  | AI-powered API builder praised for its drag-and-drop interface, AI code generation, and real-time collaboration features.                                                          | Cloud   |
 
 ### Design
 
