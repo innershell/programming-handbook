@@ -24,6 +24,30 @@ A cheat sheet of the package manager name and usage options for each platform.
 | **Remove Depencencies** | `apt autoremove` | `pacman -Qtdq \| sudo pacman -Rns -` | `dnf autoremove` |
 | **Remove Package Cache** | | `pacman -Scc` | |
 
+# Temporary Files
+
+These are the folders holding temp files that can consume disk.
+
+```
+~/.cache
+/tmp
+/var/tmp
+/var/log
+/var/cache/pacman/pkg
+```
+
+## Cleanup
+
+```bash
+# journalctl
+journalctl --disk-usage
+jouralctl --vacuum-time=1days
+jouralctl --vacuum-time=1weeks
+jouralctl --vacuum-time=1months
+journalctl --vacuum-size=200M
+
+```
+
 # Useful Commands
 Command to locate a file. To search for a file that contains two or more words, use an asterisk (*).
 
@@ -103,27 +127,48 @@ Configure network adapters and interfaces.
 ## journalctl
 To print log entries from `systemd`
 
+```
+journalctl
+```
+
 ## dmesg
 Print the kernel messages.
 
-    dmesg
+```
+dmesg
+```
 
 ## lspci
 List of all PCI components.
 
-    lscpi
+```
+lscpi
+```
 
 ## lshw
 List of all hardware components.
 
-    lshw -C video
+```
+lshw -C video
+```
 
 ## df
 A report on the system’s disk space usage. Use `-m` option to report in MB.
 
-    df -m
+```
+df -m
+```
 
 ## du
 How much space a file or a directory takes.
 
-    du
+```
+du
+```
+
+## upower
+Report USB devices battery.
+
+```
+upower
+```
