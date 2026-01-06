@@ -15,6 +15,9 @@ em = px / px (font)
 | SF Pro Icons | |
 | Helvetica Neue | |
 | Helvetica | |
+| Oswald | Goof for skinny stuff |
+| Poppins | |
+| Manrope | |
 
 ## Sizes
 | Class | Size | Height | Weight | Letter Spacing | Usage |
