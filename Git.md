@@ -20,6 +20,26 @@ This creates a `.gitconfig` file with the following contents:
 
 	git clone https://<username>:<personal-access-token>@github.com/<organization>/<respository-name>.git
 
+## Login Issues
+Make sure you have a secret store for the credentials.
+```
+sudo pacman -S gnome-keyring
+systemctl --user enable --now gnome-keyring-daemon.service
+code --password-store="gnome-libsecret"
+```
+
+### Visual Studio Code Terminal
+If general Git solutions for authentication issues don't work, specific VS Code settings might be interfering: 
+- Disable **Terminal Authentication**: This forces Git operations in the integrated terminal to use the system's authentication methods rather than VS Code's internal handler.
+- Go to `File > Preferences > Settings` (or Code > Settings on some Linux builds).
+- Search for `git.terminalAuthentication` and uncheck the box.
+
+Check Default Browser Settings: 
+- Sometimes, the authentication process which relies on opening a browser window might fail if the default system browser is misconfigured or a Flatpak installation.
+- Ensure a standard browser (like Chrome or Firefox installed via system packages, not Flatpak) is set as the default in your Linux system settings.
+
+Alternatively, you can try signing in via the GitHub CLI using the command gh auth login in the VS Code terminal. Clear Cached Credentials: If an old, invalid password is being used repeatedly, clear any saved credentials from your system's keyring or a credential manager. The method varies depending on your Linux distribution and desktop environment (e.g., Gnome Keyring). 
+
 ## Add Files
 
 	git add index.html // Adds a specific file to the staging area.
