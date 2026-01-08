@@ -7,18 +7,18 @@ Create a folder on local drive where all of your working source files will be pl
 
 ## Configure User Profile
 ```
-git config --global user.name 'Melvin Tan' & git config --global user.email 'innershell@gmail.com'
+git config --global user.name '<Your Name>' & git config --global user.email '<your_email>@gmail.com'
 ```
 
 This creates a `.gitconfig` file with the following contents:
 ```
 [user]
-    name = Melvin Tan
-    email = innershell@gmail.com
+    name = <Your Name>
+    email = <your_email>@gmail.com
 ```
 ## Fetch Repo
 
-	git clone https://<username>:<personal-access-token>@github.com/innershell/respository-name.git
+	git clone https://<username>:<personal-access-token>@github.com/<organization>/<respository-name>.git
 
 ## Add Files
 
