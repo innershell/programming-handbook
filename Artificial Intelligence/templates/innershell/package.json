@@ -1,0 +1,14 @@
+{
+  "name": "freewind-productivity-apps",
+  "version": "1.0.0",
+  "description": "Suite of Serverless Productivity Apps",
+  "scripts": {
+    "dev": "cd frontend && npm run dev",
+    "clean": "rm -rf dist",
+    "build": "rm -rf dist && mkdir dist && cp -r frontend/app/app-launcher/src/* dist/ && mkdir dist/expensing && cp -r frontend/app/expensing/src/* dist/expensing/ && mkdir dist/invoicing && cp -r frontend/app/invoicing/src/* dist/invoicing/ && mkdir dist/productivity-metrics && cp -r frontend/app/productivity-metrics-extension/src/* dist/productivity-metrics/ && cp -r shared dist/ && sed -i '' 's|../../../shared|../shared|g' dist/invoicing/index.html",
+    "setup:antigravity": "node scripts/setup-antigravity.js",
+    "setup:claude": "node scripts/setup-claude.js"
+  },
+  "author": "",
+  "license": "ISC"
+}

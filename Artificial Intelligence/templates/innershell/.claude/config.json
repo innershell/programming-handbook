@@ -1,0 +1,104 @@
+{
+  "project": "Development Workflow Agents",
+  "version": "1.0.0",
+  "commands": {
+    "searchPaths": [".claude/commands"],
+    "aliases": {
+      "prd": "analyze-prd",
+      "req": "validate-requirements",
+      "arch": "design-architecture",
+      "review-arch": "review-architecture",
+      "dev": "implement-tdd",
+      "review": "review-code",
+      "test": "test-e2e"
+    }
+  },
+  "workflows": {
+    "full-cycle": {
+      "description": "Complete development cycle from PRD to testing",
+      "steps": [
+        {
+          "command": "analyze-prd",
+          "description": "Analyze product requirements",
+          "continueOnError": false
+        },
+        {
+          "command": "validate-requirements",
+          "description": "Validate and decompose requirements",
+          "continueOnError": false
+        },
+        {
+          "command": "design-architecture",
+          "description": "Create technical design",
+          "continueOnError": false
+        },
+        {
+          "command": "review-architecture",
+          "description": "Review architecture design",
+          "continueOnError": false,
+          "requiresApproval": true
+        },
+        {
+          "command": "implement-tdd",
+          "description": "Implement using TDD",
+          "continueOnError": false
+        },
+        {
+          "command": "review-code",
+          "description": "Review implementation",
+          "continueOnError": false
+        },
+        {
+          "command": "test-e2e",
+          "description": "Run E2E tests",
+          "continueOnError": true
+        }
+      ]
+    },
+    "quick-review": {
+      "description": "Quick code review workflow",
+      "steps": [
+        {
+          "command": "review-code",
+          "parameters": {
+            "path": "./src"
+          }
+        },
+        {
+          "command": "test-e2e",
+          "parameters": {
+            "framework": "jest"
+          }
+        }
+      ]
+    }
+  },
+  "defaults": {
+    "language": "typescript",
+    "testFramework": "jest",
+    "e2eFramework": "cypress",
+    "outputFormat": "markdown",
+    "codeQuality": {
+      "maxFunctionLength": 20,
+      "maxFileLength": 200,
+      "minTestCoverage": 80,
+      "maxCyclomaticComplexity": 10
+    }
+  },
+  "integrations": {
+    "confluence": {
+      "enabled": false,
+      "baseUrl": "https://your-domain.atlassian.net/wiki",
+      "space": "DEV"
+    },
+    "jira": {
+      "enabled": false,
+      "baseUrl": "https://your-domain.atlassian.net",
+      "project": "PROJ"
+    },
+    "github": {
+      "enabled": true,
+      "autoCreatePR": false
+    }
+  }
+}
