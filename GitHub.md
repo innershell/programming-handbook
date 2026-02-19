@@ -110,3 +110,19 @@ This command is a faster way by adding an option with commit comments.
 ## Sync to Local
 
 	git pull
+
+# Projects, Issues, and Milestones
+
+## Projects
+GitHub **Projects** (the planning tool) can live at different levels depending on what you're trying to organize:
+- **Repository-level Projects**: These are contained within a specific repository. They are best for managing tasks, bugs, and features that only apply to that one codebase.
+- **User/Account-level Projects**: These live on your personal profile. They are perfect for "big picture" planning that spans across multiple repositories you own.
+- **Organization-level Projects**: If you are part of a team, projects can live at the organization level. This allows you to track issues and pull requests from many different repositories owned by that organization in one central board.
+
+## Issues
+GitHub Issues live within the a **repository******. The Project is just a **view** that pulls in issues from one or more repositories to help visualize the scope of a Project.
+- Note that *Draft* issues only live in the Project until it is *converted* into an Issue.
+
+## Milestones
+GitHub Milestones live strictly inside a **Repository**, just like **Issues**.
+
