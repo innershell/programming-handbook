@@ -1,6 +1,6 @@
 ---
 trigger: always_on
-scope: "tickets/**/*.md"
+scope: "docs/tickets/**/*.md"
 ---
 
 # Ticket Instructions

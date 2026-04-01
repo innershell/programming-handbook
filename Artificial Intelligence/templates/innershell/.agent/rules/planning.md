@@ -23,7 +23,7 @@ scope: "**"
   - App docs: `docs/software_units/app_<appname>.md`
   - ALWAYS use the code as the final source of truth if there is conflict between the documentation and the implementation.
 
-- **Review Active Work**: Check `tickets/working/` to understand conflicting changes or immediate goals.
+- **Review Active Work**: Check `docs/tickets/working/` to understand conflicting changes or immediate goals.
 
 - **Plan Changes**: If a ticket is provided, ALWAYS outline the planned changes in **LLM Plan** section for review before implementation.
 

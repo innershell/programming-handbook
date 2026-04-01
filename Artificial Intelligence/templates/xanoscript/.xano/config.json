@@ -1,0 +1,24 @@
+{
+  "instanceName": "xt5n-qqwz-eogp",
+  "instanceDisplay": "Sage Bio, Inc.",
+  "workspaceName": "Visualizer",
+  "workspaceId": 1,
+  "branch": "v1.22",
+  "paths": {
+    "functions": "functions",
+    "tables": "tables",
+    "apis": "apis",
+    "tasks": "tasks",
+    "tools": "tools",
+    "workflowTests": "workflow_tests",
+    "agents": "agents",
+    "agentTriggers": "agents/triggers",
+    "mcpServers": "mcp_servers",
+    "mcpServerTriggers": "mcp_servers/triggers",
+    "tableTriggers": "tables/triggers",
+    "addOns": "addons",
+    "middlewares": "middlewares",
+    "realtimeChannels": "realtime",
+    "realtimeTriggers": "realtime/triggers"
+  }
+}

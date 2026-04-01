@@ -9,7 +9,7 @@ You'll want to work step by step through the phases below, ensuring each is comp
 
 1. Read the **Project Overview**: Follow the [Instructions for Understanding the Project](instructions/planning.instructions.md) and [README.md](README.md) to gather context about the project structure, existing code, and documentation.
 
-2. Read the **Ticket**: `tickets/` directory (see [Instructions for Working with Tickets](instructions/tickets.instructions.md)). If a ticket is given as context for changes, understand the requirements, designs, constraints, and acceptance criteria outlined in the ticket.
+2. Read the **Ticket**: `docs/tickets/` directory (see [Instructions for Working with Tickets](instructions/tickets.instructions.md)). If a ticket is given as context for changes, understand the requirements, designs, constraints, and acceptance criteria outlined in the ticket.
 
 3. Create or Edit **Tables**: `backend/db/tables/` directory (see [Guideline for System Tables](../docs/guidelines/guideline_for_database.md)). It is recommended to create tables without foreign key references, constraints, or indexes initially. These can be added later once all required tables have been created.
 
@@ -19,7 +19,7 @@ You'll want to work step by step through the phases below, ensuring each is comp
 
 6. Create or Edit **API Endpoints**: When defining inputs for API endpoints, [Guideline for API Endpoints](../docs/guidelines/guideline_for_api_endpoints.md) for naming conventions, data types, and error handling.
 
-7. Create or Edit **Tickets**: `tickets/` directory (see [Guideline for Tickets](../docs/guidelines/guideline_for_tickets.md)). When creating tickets, ensure to include all necessary information required by the [Template for Tickets](../docs/templates/template_for_tickets.md) and follow the [Instructions for Working with Tickets](instructions/tickets.instructions.md).
+7. Create or Edit **Tickets**: `docs/tickets/` directory (see [Guideline for Tickets](../docs/guidelines/guideline_for_tickets.md)). When creating tickets, ensure to include all necessary information required by the [Template for Tickets](../docs/templates/template_for_tickets.md) and follow the [Instructions for Working with Tickets](instructions/tickets.instructions.md).
 
 8. Create or Edit **Markdown Documentation**: `docs/software_units/` directory (see [Instructions for Updating Documentation](instructions/documenting.instructions.md)). After making code changes to a software unit, immediately update the relevant documentation to reflect the changes. This includes updating system design, features, and business rules as necessary.
 
