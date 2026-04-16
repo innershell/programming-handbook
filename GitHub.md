@@ -20,12 +20,24 @@ This creates a `.gitconfig` file with the following contents:
 
 	git clone https://<username>:<personal-access-token>@github.com/<organization>/<respository-name>.git
 
-## Login Issues
+## Authentication Issues
 Make sure you have a secret store for the credentials.
-```
+
+Arch Linux:
+```bash
 sudo pacman -S gnome-keyring
 systemctl --user enable --now gnome-keyring-daemon.service
 code --password-store="gnome-libsecret"
+```
+Windows WSL2
+```bash
+# 1. Ensure Git for Windows is installed on your Windows host.
+
+# 2. Configure Git in WSL to use the Windows Git Credential Manager:
+git config --global credential.helper "/mnt/c/Program\ Files/Git/mingw64/bin/git-credential-manager.exe"
+
+# 3. Ensure GCM is configured to use Windows as the credential store (usually default):
+git config --global credential.credentialStore windows
 ```
 
 ### Visual Studio Code Terminal
