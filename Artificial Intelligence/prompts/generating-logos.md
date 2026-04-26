@@ -1,0 +1,5 @@
+Make me a vector logo image for, **Freewind**, a **web application which offers a whole suite of productivity apps for small businesses such as todo lists, project management, invoicing, expensing, booking meetings, and more**. The logo should symbolically make sense for an audience who are looking for **productivity apps for personal use, individual contributor use, or small business use**.
+
+Make the logo modern, simplistic, and clean so that it can be used as icons, favicons, launchers, or avatars. The logo should be simplistic, containing only one element and use colors for my web app, which are **#ff7edb (for accent) and #a148ab80 (for muted accent)**. The color scheme of the logo should work well for both digital (for light or dark modes) and print media (for black or white media backgrounds).
+
+Return only the image, not the image in some scene. Generate six (6) variations of the image covering a diverse range of shapes, styles, and typographies so that they do not resemble a variation of each other. Display the generated logos for preview and also provide a downloadable SVG file for post edits.
