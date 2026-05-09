@@ -1,4 +1,59 @@
 # File Structure
+
+```
+/                      Root 
+|---bin                Commands needed during bootup that might be needed by normal users. 
+|---boot               Files used by the bootstrap loader, LILO.  Kernel images are often kept here. 
+|---dev                Device files for devices such as disk drives, serial ports, etc. 
+|---etc                Configuration files specific to the machine. 
+|    |----skel         When a home directory is created it is initialized with files from this directory 
+|    |---sysconfig     Files that configure the linux system for networking, keyboard, time, and more. 
+|---home               Contains the user's home directories 
+|    |---ftp           Users include many services as listed here 
+|    |---httpd 
+|    |---samba 
+|    |---user1
+|    |    |--- .var             
+|    |    |    |-- app        Data for apps installed via Flatpak.
+|    |---user2 
+|---lib                Shared libraries needed by the programs on the root filesystem 
+|    |---modules       Loadable kernel modules, especially those needed to boot the system after disasters. 
+|---media              Mount points for removable media such as CD ROMS. 
+|---mnt                Mount points for temporary mounts by the system administrator. 
+|---opt                Optional application software packages, which is not handled by the package manager. 
+|---proc               This filesystem is not on a disk.  Exists in the kernels imagination (virtual).  This directory 
+|    |                 Holds information about kernel parameters and system configuration. 
+|    |---1             A directory with info about process number 1.  Each process has a directory below proc.   
+|---root               The home directory for the root user 
+|---run                Run-time variable data: Information about the running system since last boot. 
+|---sbin               Like bin but commands are not intended for normal users (e.g., superuser).  Commands run by LINUX. 
+|---srv                Site-specific data served by this system such as web servers, FTP servers, version control systems. 
+|---sys                Information about devices, drivers, and some kernel features. 
+|---tmp                Temporary files.  Programs running after bootup should use /var/tmp. 
+|---usr                Contains all commands, libraries, man pages, games and static files for normal operation. 
+|    |---bin                  Almost all user commands.  Some commands are in /bin or /usr/local/bin. 
+|    |---include              Header files for the C programming language.  Should be below /user/lib for consistency. 
+|    |---lib                  Unchanging data files for programs and subsystems 
+|    |---local                The place for locally installed software and other files. 
+|    |---sbin                 System admin commands not needed on the root filesystem. E.g., most server programs. 
+|    |---share                Architecture-independent (shared data) 
+|    |    |---applications    Where all the application shortcuts are stored.
+|    |---src                  Source code. E.g., the kernel source code with its header files. 
+|    |---X11R6                The X windows system files.  There is a directory similar to usr below this directory. 
+|---var                       Contains files that change for mail, news, printers log files, man pages, temp files 
+|    |---cache                Application cache data. 
+|    |---lib                  Files that change while the system is running normally 
+|    |---local                Variable data for programs installed in /usr/local. 
+|    |---lock                 Lock files.  Used by a program to indicate it is using a particular device or file 
+|    |---log                  Log files from programs such as login and syslog which logs all logins, logouts, and other system messages. 
+|    |---mail                 Mailbox files. 
+|    |---opt                  Variable data from add-on packages that are stored in /opt. 
+|    |---run                  Files that contain information about the system that is valid until the system is next booted 
+|    |---spool                Directories for mail, printer spools, news and other spooled work. 
+|    |---tmp                  Temporary files that are large or need to exist for longer than they should in /tmp. 
+|    |---www 
+|    |    |---html 
+```
 ## Installed Apps
 `/usr/local/` for your user profile
 `/opt/` for shared users
