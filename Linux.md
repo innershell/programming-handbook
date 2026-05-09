@@ -23,6 +23,7 @@ A cheat sheet of the package manager name and usage options for each platform.
 | **Package No Longer in Repos** | | `pacman -Qm` | |
 | **Remove Depencencies** | `apt autoremove` | `pacman -Qtdq \| sudo pacman -Rns -` | `dnf autoremove` |
 | **Remove Package Cache** | | `pacman -Scc` | |
+| **Remove Yay Cache** | | `yay -Sc` ||
 
 # Temporary Files
 
@@ -39,6 +40,9 @@ These are the folders holding temp files that can consume disk.
 ## Cleanup
 
 ```bash
+# yay
+yay -Sc
+
 # journalctl
 journalctl --disk-usage
 jouralctl --vacuum-time=1days
@@ -46,6 +50,9 @@ jouralctl --vacuum-time=1weeks
 jouralctl --vacuum-time=1months
 journalctl --vacuum-size=200M
 
+# npm, pnpm
+npm cache clean --force
+pnpm store prune
 ```
 
 # Useful Commands
@@ -164,6 +171,14 @@ How much space a file or a directory takes.
 
 ```
 du
+```
+
+## ncdu
+Terminal based visualizer of du
+
+```
+sudo pacman -S ncdu
+ncdu /
 ```
 
 ## upower
