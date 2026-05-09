@@ -13,6 +13,7 @@
 |    |---httpd 
 |    |---samba 
 |    |---user1
+|    |    |--- .cache         Temporary application cache files.
 |    |    |--- .var             
 |    |    |    |-- app        Data for apps installed via Flatpak.
 |    |---user2 
