@@ -143,6 +143,24 @@ If you want to uncommit and **keep your files exactly as they are** (to edit or 
 
     git pull
 
+## Rebase to `origin/main`
+
+    git checkout <your-current-feature-branch-to-rebase>
+    git fetch origin
+    git rebase origin/main
+
+If you get a status counter (e.g. `↓3 ↑37` or "pull 3, push 37"), it means your local branch and the remote branch have diverged following a rebase. Here's why those numbers show up:
+- **Push 37 (Out of Sync Commits):** When you rebase, Git rewrites the commit history of your branch by reapplying your local commits on top of main. Even if the underlying code is the exact same, those 37 reapplied commits now have entirely new commit hashes and timestamps. Your local branch considers all 37 to be "new" commits that need to be pushed to the remote.
+- **Pull 3 (Orphaned Remote Commits):** The remote repository still holds your old, pre-rebase version of the branch with the original commit hashes (in this case, 3 commits that the remote has, which your local branch replaced during the rebase). VS Code sees that the remote branch has commits your local branch lacks, so it flags them as incoming pulls.
+
+If you are the only person working on this feature branch, you need to overwrite the remote branch history with your freshly rebased local history:
+
+    git push --force-with-lease
+
+(Using `--force-with-lease` is safer than standard `-f` because it prevents accidentally overwriting work if someone else pushed to the remote branch).
+
+> **Warning:** Do not click VS Code's Sync or Pull button when your branch is in this state. Clicking Pull will attempt to merge your old remote commits back into your newly rebased local commits, duplicating your commit history and creating duplicate merge conflicts.
+
 # Projects, Issues, and Milestones
 
 ## Projects
