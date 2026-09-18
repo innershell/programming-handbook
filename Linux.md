@@ -153,6 +153,11 @@ Find running processes.
 
      ps -ef | grep nginx
 
+## lsof
+Find running processes using a specific port
+
+    lsof -it :8081,3000
+    
 ## tar
 Create a tar.gz file
 
